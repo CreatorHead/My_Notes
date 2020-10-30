@@ -1,0 +1,18 @@
+text.endswith(".jpg") -----------> Returns the value True if the String has the given
+				   subString at the end.
+
+text.upper()	      -----------> Return a copy of the string converted to uppercase.
+
+text.lower() 	      -----------> Return a copy of the string converted to lowercase.
+
+text.replace("abc","xyz"); ------> Return a copy of the string with all occurrences of
+				   one substring replaced by another.
+
+text.strip();	      -----------> Return a copy of the string with the leading and
+				   trailing whitespace removed.
+
+text.find("python")   -----------> Return the first index value when the given substring
+				   is found.
+
+text.startsWith("<HTML>") --------> Return the value True if the string has the given 
+				   substring at the beginning.
