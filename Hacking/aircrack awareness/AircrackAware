@@ -1,0 +1,4 @@
+service network-manager restart
+service avahi-daemon restart
+kill all the processes by yourself and don't use airmon check kill command
+
