@@ -1,0 +1,10 @@
+1. Hibernate (ORM Framework)
+2. Struts (Web Application Development Framework)
+3. Springs (Dependency Injection Framework)
+4. Log4J (Logging Framework)
+5. Junit (Unit Testing Framework)
+6. Apache ANT (Build Framework)
+7. Many More ...
+
+
+

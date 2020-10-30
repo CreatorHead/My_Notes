@@ -1,0 +1,33 @@
+"from" & "FROM" 
+"StudentsInfoBean" 
+"STUDENTSINFOBEAN"
+
+1. Construct HQL
+
+    String hqlQuery
+    = "from StudentsInfoBean";
+	
+2. Create "org.hibernate.Query" Object
+
+   Query queryRef 
+   = session.createQuery(hqlQuery)
+   
+3. Execute the the HQL query by using 
+   appropriate methods on "Query" object  
+   
+   - Invoke "list()" method if the HQL is of 
+     type SELECT
+	 
+	 java.util.List results 
+	 = queryRef.list();
+   
+   - Invoke "executeUpdate()" method if the 
+     HQL is of type INSERT / UPDATE / DELETE
+   
+	 int count = queryRef.executeUpdate();
+	 
+4. Extract the Results	 
+
+
+
+

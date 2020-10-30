@@ -1,0 +1,125 @@
+"Dependency Injection / Inversion of Control (IOC)"
+
+"Aspect Oriented Programming (AOP)"
+
+
+
+
+"spring-framework-3.2.1.RELEASE-dist.zip" file
+
+
+
+
+
+
+
+
+
+
+Download Link :
+================
+
+http://maven.springframework.org/release/
+                 org/springframework/spring/
+					 
+					 
+
+					 
+					 
+					 
+"commons-logging-1.1.1.jar"					 
+
+
+"ApplicationContext"
+
+
+
+"<bean>"
+
+"<beans>"
+
+
+
+
+
+
+
+
+
+1. id :
+
+
+ 
+2. class :
+
+"<property>"
+
+1. name : 
+
+2. value : 
+
+3. ref :
+
+
+
+
+
+
+
+
+
+1. org.springframework.context.support
+     .ClassPathXmlApplicationContext
+
+
+2. org.springframework.context.support
+     .FileSystemXmlApplicationContext
+
+
+3. org.springframework.web.context
+    .support.XmlWebApplicationContext
+	
+
+ClassPathXmlApplicationContext 
+OR
+FileSystemXmlApplicationContext
+
+XmlWebApplicationContext
+	
+	 
+String[] configFileNames 
+ = new String[]{"ApplicationContext1.xml", 
+			"com/mycomp/myproj1/ApplicationContext2.xml", 
+			"com/mycomp/myproj2/ApplicationContext3.xml"}; 
+		
+ApplicationContext context 
+= new ClassPathXmlApplicationContext(configFileNames);	 
+	 
+	 
+
+String[] fileLocs 
+= new String[] {"C:\\folderNM1\\ApplicationContext1.xml",
+				"D:\\folderNM2\\ApplicationContext2.xml",
+				"E:\\folderNM3\\ApplicationContext3.xml"};
+		
+ApplicationContext context 
+= new FileSystemXmlApplicationContext(fileLocs);	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+
+
+
+
+
+
+
+
+					 
+					 
+					 
+					 

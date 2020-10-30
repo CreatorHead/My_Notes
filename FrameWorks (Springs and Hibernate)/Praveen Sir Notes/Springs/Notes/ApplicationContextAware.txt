@@ -1,0 +1,7 @@
+ApplicationContextAware Interface
+====================================
+
+org.springframework.context.ApplicationContextAware
+
+public void setApplicationContext(ApplicationContext context)
+throws BeansException 

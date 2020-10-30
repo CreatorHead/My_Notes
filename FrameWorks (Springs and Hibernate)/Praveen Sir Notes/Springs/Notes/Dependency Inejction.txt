@@ -1,0 +1,63 @@
+1. Setter Based Dependency Injection
+2. Constructor Based Dependency Injection
+
+1. Setter Based Dependency Injection
+=====================================
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+2. Constructor Injection
+=========================
+
+	1. Constructor Argument Index
+	2. Constructor Argument Name
+	3. Constructor Argument Type Matching
+	4. Constructor Argument Resolution
+	
+"Interface Injection"
+
+
+<bean id="classABean" class="somepackage.ClassA">
+	  <!-- Property declaration-->
+</bean>
+
+<bean id="classBBean" class="somepackage.ClassB">
+	  <!-- Property declaration-->
+</bean>
+
+
+<bean id="myClass1Bean" class="somepackage.MyClass1">
+	  <property name="interfaceRef" ref="classABean" />
+	  OR
+	  <property name="interfaceRef" ref="classBBean" />
+	  
+	 <!-- Other Property declaration-->
+</bean>
+
+
+<bean id="myClass2Bean" class="somepackage.MyClass2">
+	  <constructor-arg name="interfaceRef" ref="classABean" />
+	  OR
+	  <constructor-arg name="interfaceRef" ref="classBBean" />
+	  
+	 <!-- Other Property declaration-->
+</bean>
+
+
+
+
+
+
+
+
+
+

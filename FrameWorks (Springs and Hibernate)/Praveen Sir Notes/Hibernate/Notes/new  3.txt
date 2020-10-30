@@ -1,0 +1,92 @@
+select * from students_info where regno = 34;
+select * from guardian_info where regno = 34;
+
+<one-to-one>
+
+<many-to-one>
+
+
+fetch="join"
+==============
+
+ select
+        studentbea0_.regno as regno0_2_,
+        studentbea0_.firstname as firstname0_2_,
+        studentbea0_.middlename as middlename0_2_,
+        studentbea0_.lastname as lastname0_2_,
+        studentbea0_.courseid as courseid0_2_,
+        guardianbe1_.regno as regno1_0_,
+        guardianbe1_.gfirstname as gfirstname1_0_,
+        guardianbe1_.gmiddlename as gmiddlen3_1_0_,
+        guardianbe1_.glastname as glastname1_0_,
+        coursebean2_.courseid as courseid2_1_,
+        coursebean2_.coursename as coursename2_1_ 
+    from
+        students_info studentbea0_ 
+    left outer join
+        guardian_info guardianbe1_ 
+            on studentbea0_.regno=guardianbe1_.regno 
+    left outer join
+        course_info coursebean2_ 
+            on studentbea0_.courseid=coursebean2_.courseid 
+    where
+        studentbea0_.regno=?
+
+
+
+select
+        studentbea0_.regno as regno0_1_,
+        studentbea0_.firstname as firstname0_1_,
+        studentbea0_.middlename as middlename0_1_,
+        studentbea0_.lastname as lastname0_1_,
+        studentbea0_.courseid as courseid0_1_,
+        guardianbe1_.regno as regno1_0_,
+        guardianbe1_.gfirstname as gfirstname1_0_,
+        guardianbe1_.gmiddlename as gmiddlen3_1_0_,
+        guardianbe1_.glastname as glastname1_0_ 
+    from
+        students_info studentbea0_ 
+    left outer join
+        guardian_info guardianbe1_ 
+            on studentbea0_.regno=guardianbe1_.regno 
+    where
+        studentbea0_.regno=?
+Record Exists ...
+Reg. No. : 36
+First Name : Shobha
+Middle Name : NA
+Last Name : Akka
+=============================
+G Reg. No. : 36
+G First Name : Yaddi
+G Middle Name : NA
+G Last Name : B S
+=============================
+Course ID : 2
+Hibernate: 
+    select
+        coursebean0_.courseid as courseid2_0_,
+        coursebean0_.coursename as coursename2_0_ 
+    from
+        course_info coursebean0_ 
+    where
+        coursebean0_.courseid=?
+Course Name : J2EE
+
+
+1. fetch="select"
+==================
+
+2. fetch="join"
+==================
+
+
+
+
+
+
+
+
+
+
+

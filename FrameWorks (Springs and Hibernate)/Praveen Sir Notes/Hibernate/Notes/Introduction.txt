@@ -1,0 +1,43 @@
+1. Struts (Web Application Development)
+2. Hibernate 
+   (DB Interaction / ORM Framework)
+3. Springs (Web Application Development)
+4. Log4J (Logging Framework)
+5. Apache ANT 
+   (Build & Deployment Framework)
+6. etc.,
+
+
+
+MySQL & PostgreSQL:	
+---------------------
+SELECT * FROM students_info LIMIT 5;
+
+Oracle:	
+--------
+SELECT * FROM students_info WHERE rownum <= 5;
+
+MSSQL Server:	
+---------------
+SELECT TOP 5 * FROM students_info;
+
+ 
+
+OBject Relational Mapping (ORM)
+
+
+1. slf4j-simple-1.6.1.jar
+2. mysql-connector-java-5.1.7-bin.jar
+
+& copy to the above folder
+
+"hibernate.cfg.xml"
+
+1. Load the Config File
+2. Build Session Factory
+3. Open Session
+4. Operate with DB
+5. Flush & Close the Session
+
+
+

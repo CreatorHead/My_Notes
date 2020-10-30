@@ -1,0 +1,12 @@
+create table students_info2
+(regno int(10) not null AUTO_INCREMENT,
+ firstname varchar(50),
+ middlename varchar(50),
+ lastname varchar(50),
+ primary key(regno)
+);
+
+insert into	students_info2
+	(firstname, middlename, lastname) 
+values
+	('Praveen', 'NA', 'D');

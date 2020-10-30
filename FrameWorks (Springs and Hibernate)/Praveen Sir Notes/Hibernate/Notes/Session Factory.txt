@@ -1,0 +1,14 @@
+//1. Load the Configuration File
+Configuration config = new Configuration();
+config.configure(); 
+
+//2. Build the Session Factory
+SessionFactory factory = config.buildSessionFactory();
+
+
+OR
+
+//Step 1 & 2 is Clubed
+SessionFactory factory
+= new Configuration().configure().buildSessionFactory();
+

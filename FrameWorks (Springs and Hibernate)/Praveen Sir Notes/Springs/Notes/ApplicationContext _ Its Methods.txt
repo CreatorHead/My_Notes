@@ -1,0 +1,61 @@
+public abstract interface 
+org.springframework.context.ApplicationContext 
+extends 
+org.springframework.core.env.EnvironmentCapable, 
+org.springframework.beans.factory.ListableBeanFactory, 
+org.springframework.beans.factory.HierarchicalBeanFactory, 
+org.springframework.context.MessageSource, 
+org.springframework.context.ApplicationEventPublisher, 
+org.springframework.core.io.support.ResourcePatternResolver 
+  
+public abstract interface 
+org.springframework.beans.factory.ListableBeanFactory 
+extends 
+org.springframework.beans.factory.BeanFactory 
+  
+1. Object BeanFactory.getBean(String beanID) 
+   throws BeansException
+
+2. <Corresponding Class Object> BeanFactory.getBean(Class classNM) 
+   throws BeansException
+
+3. <Corresponding Class Object> 
+				BeanFactory.getBean(String beanID, Class classNM)
+   throws BeansException
+
+4. String[] ListableBeanFactory.getBeanDefinitionNames()
+
+5. String[] ListableBeanFactory.getBeanNamesForType(Class classNM)
+
+6. boolean BeanFactory.containsBean(String beanID)
+
+7. boolean BeanFactory.isPrototype(String beanID) 
+   throws NoSuchBeanDefinitionException
+
+   "prototype"
+   
+8. boolean BeanFactory.isSingleton(String beanID) 
+   throws NoSuchBeanDefinitionException
+
+    "singleton"
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+
+
+   
+   
+   

@@ -1,0 +1,7 @@
+
+1. Object Session.get(Class clazz, Serializable id) 
+   throws HibernateException
+
+2. Object Session.load(Class theClass, Serializable id)
+   throws HibernateException
+

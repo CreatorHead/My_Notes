@@ -1,0 +1,94 @@
+Spring Lifecycle Callbacks
+=============================
+
+1. By implementing 
+   org.springframework.beans.factory.InitializingBean &
+   org.springframework.beans.factory.DisposableBean 
+   Interfaces
+   
+2. By using "init-method" & "destroy-method" 
+	of <bean> tag Attributes
+
+3. By using @PostConstruct & @PreDestroy Annotations
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+public void afterPropertiesSet() 
+throws Exception 
+
+
+public void destroy() 
+throws Exception
+
+
+
+"default-init-method" & "default-destroy-method" 
+
+
+<beans>
+
+
+<beans 	
+	-------
+	-------
+	default-init-method="myInitMethod"
+	default-destroy-method="myDestroyMethod" >
+
+	<!-- Bean Declaration Goes Here -->
+
+</beans>	
+
+
+
+javax.annotation.* package
+
+
+1. by defining bean of type 
+     org.springframework.context.annotation
+	             .CommonAnnotationBeanPostProcessor
+	in Spring config file
+	
+2. by using context:annotation-config element in 
+   Spring config file
+	
+
+
+
+
+
+
+
+
+<bean id="annotationProcessor" 
+class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

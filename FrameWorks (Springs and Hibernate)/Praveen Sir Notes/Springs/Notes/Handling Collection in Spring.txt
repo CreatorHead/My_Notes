@@ -1,0 +1,14 @@
+1. java.util.List
+2. java.util.Set
+3. java.util.HashMap
+4. java.util.Properties
+
+<list> & <set>
+<map> <entry> 
+"key" & "value"
+
+<props>
+
+
+
+

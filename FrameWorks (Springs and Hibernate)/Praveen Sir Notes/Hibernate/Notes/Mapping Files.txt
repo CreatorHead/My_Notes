@@ -1,0 +1,13 @@
+<hibernate-mapping>
+	<class name="pkg.Bean1" table="table1">
+	   --------------    
+	   --------------
+	   --------------
+	</class>
+	
+	<class name="pkg.Bean2" table="table2">
+	   --------------    
+	   --------------
+	   --------------
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,12 @@
+=================================================
+|   Cascade Option 		|		Description	 	|
+=================================================
+|	cascade="none"		|	It's Default		|
+|	cascade="all"		|						|
+|	cascade="save"		|						|
+|	cascade="update"	|						|
+| cascade="save-update"	|						|
+| 	cascade="delete"	|						|
+|	Many More (2 More)	|						|
+=================================================
+					

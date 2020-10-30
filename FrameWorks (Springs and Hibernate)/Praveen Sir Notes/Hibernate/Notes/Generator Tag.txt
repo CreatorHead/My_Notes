@@ -1,0 +1,85 @@
+About <generator> Tag :
+=======================
+
+<id> tag
+
+1. assigned
+2. increment
+3. identity
+4. Many More (native, hilo, uuid, etc.,)
+
+1. assigned
+============
+
+<id name="regno" column="regno" />
+
+OR
+
+<id name="regno" column="regno">
+   	<generator class="assigned" />
+</id>
+
+
+
+2. increment
+============
+
+long, short or intger ONLY
+
+" (Max of PK Value in DB)+1 "
+
+<id name="regno" column="regno">
+   	<generator class="increment" />
+</id>
+
+
+3. identity
+============
+
+
+
+long, short or intger ONLY
+
+<id name="regno" column="regno">
+   	<generator class="identity" />
+</id>
+
+
+
+
+
+
+
+
+
+
+Assigned
+===========
+insert into	students_info
+	(firstname, middlename, lastname, regno) 
+values
+	(?, ?, ?, ?)
+
+
+
+Increment
+==============
+
+insert into students_info
+	(firstname, middlename, lastname, regno) 
+values
+	(?, ?, ?, ?)
+	
+
+Identity
+==========
+
+insert into	students_info2
+	(firstname, middlename, lastname) 
+values
+	(?, ?, ?)
+	
+	
+	
+	
+	

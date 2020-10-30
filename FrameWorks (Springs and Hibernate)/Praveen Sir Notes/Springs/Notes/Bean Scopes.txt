@@ -1,0 +1,55 @@
+1. Singleton (its Default)
+2. Prototype
+3. Request 
+4. Session
+5. Global Session
+
+
+=====================================================
+| Scope 					|   	Description		|
+=====================================================
+| Singleton (its Default)	|						|
+| Prototype					|						|
+| Request					|						|
+| Session					|						|
+| Global Session			|						|
+
+
+1. Singleton (its Default):
+----------------------------
+<bean id="beanID" class="pkg.ClassNM">
+	  OR
+<bean id="beanID" class="pkg.ClassNM" scope="singleton">
+	  
+	  
+2. Prototype
+--------------
+<bean id="beanID" class="pkg.ClassNM" scope="prototye">
+
+	  
+3. Request
+--------------
+<bean id="beanID" class="pkg.ClassNM" scope="request">
+
+
+4. Session
+--------------
+<bean id="beanID" class="pkg.ClassNM" scope="session">
+
+	  
+4. Global Session
+------------------
+<bean id="beanID" class="pkg.ClassNM" scope="globalSession">
+
+
+
+
+
+
+
+
+
+
+	  
+	  
+	  

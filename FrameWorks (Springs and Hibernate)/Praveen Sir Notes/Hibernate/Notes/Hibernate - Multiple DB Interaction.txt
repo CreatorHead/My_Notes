@@ -1,0 +1,73 @@
+1. hibernate.MySQL.cfg.xml
+2. hibernate.Oracle.cfg.xml
+
+
+Configuration mySQLConfig = new Configuration();
+mySQLConfig.configure("hibernate.MySQL.cfg.xml");
+
+Configuration oracleConfig = new Configuration();
+oracleConfig.configure("hibernate.Oracle.cfg.xml");
+
+
+SessionFactory mySQLFactory 
+			= mySQLConfig.buildSessionFactory();
+
+SessionFactory oracleFactory 
+			= oracleConfig.buildSessionFactory();
+
+			
+			
+			
+			
+			
+			
+			
+
+
+Session mySQLSession 
+			= mySQLFactory.openSession();
+			
+Session oracleSession 
+			= oracleFactory.openSession();
+
+
+
+
+
+
+
+
+
+
+mySQLSession.save(----);
+
+This will save the record into the MySQL DB
+
+
+
+oracleSession.update(----);
+
+This will update the record into the Oracle DB
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

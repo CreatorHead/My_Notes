@@ -1,0 +1,14 @@
+org.springframework.beans.factory.BeanFactory
+
+ApplicationContext 
+extends ListableBeanFactory
+
+where as
+
+ListableBeanFactory 
+extends BeanFactory
+
+
+
+
+

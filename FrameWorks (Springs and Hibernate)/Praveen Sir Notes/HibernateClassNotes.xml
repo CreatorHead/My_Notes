@@ -1,0 +1,156 @@
+Hibernate
+	Hibernate is an open source, DB Independent,Object 
+	Relational Mapping (ORM) framework for Java that 
+	helps developer to write data handling logic 
+	without caring about DB
+	Hibernate makes our application code independent of 
+	DB. Later if our DB changes or DB Design Changes from
+	the application code point of view we need not to 
+	worry much. We just need to worry about the making
+	proper configuration changes
+	Hibernate significantly reduce development time & 
+	reduces the complex data access code
+	Hibernate takes care of mapping Java classes to DB 
+	tables & from Java data types to SQL data types
+	Hibernate takes care of converting the result set 
+	data into java beans. i.e. DTO with hibernate it’s 
+	the default behavior
+	Developers need have less / no SQL knowledge. 
+	With hibernate we need not to worry about writing 
+	SQL queries. Hibernate internally takes care of 
+	issuing SQL Queries specific to underlying DB
+	Maintenance of the application is easier. It’s 
+	easier to debug the code & easier to write the 
+	error free code 
+
+
+		
+Steps to Configure Hibernate:
+1.	Create a hibernate.cfg.xml configuration file under 
+	src (also called as project class path) & provide 
+	all the necessary information (Driver Class, DB URL, 
+	User Name & Password etc.) of the underlying DB
+2.	Create the Java Beans which replicates the 
+	underlying DB tables
+3.	Create the Mapping XML File which maps the Java 
+	Bean to DB table & Java Bean properties to DB 
+	table columns
+4.	Add the location of mapping file to 
+	hibernate.cfg.xml file
+
+	
+Necessary Steps to work with Hibernate
+
+1.	Load the Hibernate Configuration & Mapping 
+2.	Build the Session Factory
+3.	Open the session
+4.	Operate with DB
+5.	Flush & Close the session
+
+
+
+
+
+1. Loading Hibernate Configuration File:
+-------------------------------------
+The org.hibernate.cfg.Configuration is used to build
+an immutable org.hibernate.SessionFactory. The mappings
+are compiled from various XML mapping files.
+The org.hibernate.cfg.Configuration is used to build an
+immutable org.hibernate.SessionFactory.
+
+ - “org.hibernate.cfg.Configuration” is a concrete 
+    class present in Hibernate which has a non-static 
+	method by name “configure()” which helps us to load
+	the Hibernate Configuration File.
+	
+ - This Class has various overloaded version of 
+   configure() method. Which helps us to load the 
+   Hibernate Configuration File in different ways
+ 
+ - Following are the different ways to load the 
+   hibernate configuration file:
+
+   
+   
+1st Way:
+-------
+public Configuration configure() 
+					throws HibernateException 
+
+ This method looks for the configuration file with the 
+  default name “hibernate.cfg.xml” under default path 
+  i.e. under src folder (class path)
+ If the configuration file has the different name other
+  than “hibernate.cfg.xml” then this method throws an
+  exception
+ If the configuration file has “hibernate.cfg.xml” as 
+  file name but if it present somewhere other than 
+  class path (within the sub-directories of src folder
+  or may be outside of project) then this method throws
+  an exception
+
+Configuration config = new Configuration();
+config.configure();
+
+
+2ndWay:
+-------
+public Configuration configure(String resource) 
+							throws HibernateException 
+
+ This method will look out for the Configuration 
+  File with the specified name  under src i.e. either 
+  directly under src or under subdirectories of src 
+
+Configuration config = new Configuration();
+config.configure("any_name.xml");
+
+OR
+config.configure("com/pkg/any_name.xml");
+
+3rdWay:
+------
+public Configuration configure(File configFile)
+						throws HibernateException
+
+ This method will look out for the Configuration File 
+  with the specified file path i.e. outside of the
+  project
+
+Configuration config = new Configuration();
+java.io.File configFileLocation 
+= new java.io.File("E:\\j2ee\\any_name.xml");
+     config.configure(configFileLocation);
+
+4thWay:
+--------
+public Configuration configure(URL url) 
+						throws HibernateException
+
+ This method will look out for the Configuration File 
+  present in web server i.e. anywhere in the world
+
+Configuration config = new Configuration();
+java.net.URL configUrl 
+		= new java.net.URL
+		("http://localhost:8080/empApp/any_name.cfg.xml");
+	config.configure(configUrl);
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

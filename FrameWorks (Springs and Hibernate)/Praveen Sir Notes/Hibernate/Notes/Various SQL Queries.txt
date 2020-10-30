@@ -1,0 +1,7 @@
+MySQL & PostgreSQL	:	SELECT * FROM students_info LIMIT 5;
+
+Oracle				:	SELECT * FROM students_info WHERE rownum <= 5;
+
+MSSQL Server		:	SELECT TOP 5 * FROM students_info;
+
+

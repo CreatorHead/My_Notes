@@ -1,0 +1,13 @@
+org.springframework.beans.factory.Aware
+
+1. BeanFactoryAware
+2. BeanNameAware
+3. ApplicationContextAware
+4. ServletConfigAware
+5. ServletContextAware
+6. Many More
+
+
+
+
+

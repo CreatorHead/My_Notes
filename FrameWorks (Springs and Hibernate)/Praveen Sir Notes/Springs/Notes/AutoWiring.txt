@@ -1,0 +1,62 @@
+1. autowire="none" [It's Default]
+===================================
+
+"ref" attribute
+
+2. autowire="byName"
+=========================
+
+3. autowire="byType"
+=========================
+
+
+
+4. autowire="constructor"
+=============================
+
+autowire="byType"
+
+
+autowire="autodetect"
+
+
+"constructor" OR "byType"
+
+
+
+About "default-autowire" Attribute
+===================================
+
+<beans  -----------
+		-----------
+		-----------
+		default-autowire="byType">
+
+<!-- Bean Declarations Goes Here -->
+
+</beans>
+
+
+
+
+
+
+
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+					       http://www.springframework.org/schema/beans/spring-beans-3.0.xsd"
+	   default-autowire="byType">
+
+	<!-- Bean Declarations Goes Here -->
+	<bean id="CountryBean" class="com.jspiders.springs.beans.Country" autowire="byName" >  
+			<property name="countryNM" 		value="India"/>  
+	</bean>
+
+</beans>
+
+
+
+

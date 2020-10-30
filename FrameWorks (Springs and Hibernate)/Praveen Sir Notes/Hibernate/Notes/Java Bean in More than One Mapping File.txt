@@ -1,0 +1,48 @@
+public class StudentAndGuardianBean 
+{
+	//Common Property for Students_Info Table & Guardian_Info Table
+	private int regno;
+
+//Students_Info Table Info
+	private String firstNM;
+	private String middleNM;
+	private String lastNM;
+	
+	//Guardian_Info Table Info
+	private String gFirstNM;
+	private String gMiddleNM;
+	private String gLastNM;
+}
+
+Students_info.hbm.xml file:
+==============================
+
+<class 
+name="com.jspiders.hibernate.beans.StudentAndGuardianBean" table="students_info" 
+entity-name="studentEntity" >
+
+Guardian_info.hbm.xml file:
+==============================
+
+<class 
+name="com.jspiders.hibernate.beans.StudentAndGuardianBean" table="guardian_info" 
+entity-name="guardianEntity" >
+
+HibernateSingleBeanExample.java
+=================================
+
+StudentAndGuardianBean bean = new StudentAndGuardianBean();
+bean.setRegno(23);
+bean.setFirstNM("Salman");
+bean.setMiddleNM("NA");
+bean.setLastNM("Khan");
+//Save the Record into students_info
+session.save("studentEntity", bean); 
+
+StudentAndGuardianBean bean = new StudentAndGuardianBean();
+bean.setRegno(23);
+bean.setFirstNM("Salman");
+bean.setMiddleNM("NA");
+bean.setLastNM("Khan");
+//Save the Record into guardian_info
+session.save("guardianEntity", bean); 

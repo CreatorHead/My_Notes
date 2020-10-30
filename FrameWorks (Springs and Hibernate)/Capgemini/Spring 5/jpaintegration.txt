@@ -1,0 +1,90 @@
+@PersistenceUnit vs @PersistenceContext
+---------------------------------------
+
+
+
+PersistenceUnit injects an EntityManagerFactory, and PersistenceContext
+injects an EntityManager. It's generally better to use 
+PersistenceContext unless you really need to manage the EntityManager
+lifecycle manually.
+
+
+EntityManager obtained via @PersistenceContext is called Container 
+Managed EntityManager as container will be responsible for managing 
+"EntityManager".
+
+EntityManager obtained via @PersistenceUnit / entityManagerFactory.
+createEntityManager() is managed in the application by the developer. 
+(for e.g. managing lifecycle of EntityManager, releasing the resources
+ acquired by EntityManager, etc.).
+
+ 
+ 
+ 
+ 
+ 
+
+
+
+@Resource vs @Autowired
+------------------------
+
+Without specifying any attributes of 
+the annotation, perform injection by type. The difference is:
+
+    @Resource allows you to specify a name of the injected bean
+    @Autowired allows you to mark it as non-mandatory.
+
+
+Both @Autowired (or @Inject) and @Resource work equally well. But there is 
+a conceptual difference or a difference in the meaning
+
+    @Resource means get me a known resource by name. The name is extracted 
+	from the name of the annotated setter or field, or it is taken from the 
+	name-Parameter.
+	
+    @Inject or @Autowired try to wire in a suitable other component by type.
+
+
+
+
+
+I would like to emphasize one comment from @Jules on this answer to this 
+question. The comment brings a useful link:
+	Spring Injection with @Resource, @Autowired and @Inject. I encourage 
+	you to read it entirely, however here is a quick summary of its
+	usefulness:
+How annotations select the right implementation?
+
+@Autowired and @Inject
+
+    Matches by Type
+    Restricts by Qualifiers
+    Matches by Name
+
+@Resource
+
+    Matches by Name
+    Matches by Type
+    Restricts by Qualifiers (ignored if match is found by name)
+
+Which annotations (or combination of) should I use for injecting my beans?
+--------------------------------------------------------------------------
+
+    Explicitly name your component [@Component("beanName")]
+
+    Use @Resource with the name attribute [@Resource(name="beanName")]
+
+Why should I not use @Qualifier?
+--------------------------------
+
+Avoid @Qualifier annotations unless you want to create a list of similar
+ beans. For example you may want to mark a set of rules with a specific 
+ @Qualifier annotation. This approach makes it simple to inject a group 
+ of rule classes into a list that can be used for processing data.
+Does bean injection slow my program?
+
+Scan specific packages for components 
+[context:component-scan base-package="com.sourceallies.person"].
+ While this will result in more component-scan configurations it reduces
+ the chance that you’ll add unnecessary components to your Spring context.

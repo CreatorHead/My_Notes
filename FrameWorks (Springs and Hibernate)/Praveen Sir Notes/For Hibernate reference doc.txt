@@ -1,0 +1,86 @@
+page 27 for Session Factory & Session
+page no 31 for COnfiguration
+page no 33 for Hibernate Properties used in cfg file
+
+
+
+
+Transaction (org.hibernate.Transaction)
+(Optional) A single-threaded, short-lived object used by the application to specify atomic
+units of work. It abstracts the application from the underlying JDBC, JTA or CORBA
+transaction. A org.hibernate.Session might span several org.hibernate.Transactions
+in some cases. However, transaction demarcation, either using the underlying API or
+org.hibernate.Transaction, is never optional.
+
+
+
+
+Configuration
+Hibernate is designed to operate in many different environments and, as such, there is a broad
+range of configuration parameters. Fortunately, most have sensible default values and Hibernate
+is distributed with an example hibernate.properties file in etc/ that displays the various
+options. Simply put the example file in your classpath and customize it to suit your needs.
+3.1. Programmatic configuration
+An instance of org.hibernate.cfg.Configuration represents an entire set of mappings of
+an application's Java types to an SQL database. The org.hibernate.cfg.Configuration is
+used to build an immutable org.hibernate.SessionFactory. The mappings are compiled from
+various XML mapping files.
+You can obtain a org.hibernate.cfg.Configuration instance by instantiating it directly and
+specifying XML mapping documents. If the mapping files are in the classpath, use addResource().
+For example:
+Configuration cfg = new Configuration()
+.addResource("Item.hbm.xml")
+.addResource("Bid.hbm.xml");
+An alternative way is to specify the mapped class and allow Hibernate to find the mapping
+document for you:
+Configuration cfg = new Configuration()
+.addClass(org.hibernate.auction.Item.class)
+.addClass(org.hibernate.auction.Bid.class);
+Hibernate will then search for mapping files named /org/hibernate/auction/Item.hbm.xml
+and /org/hibernate/auction/Bid.hbm.xml in the classpath. This approach eliminates any
+hardcoded filenames.
+A org.hibernate.cfg.Configuration also allows you to specify configuration properties. For
+example:
+Configuration cfg = new Configuration()
+.addClass(org.hibernate.auction.Item.class)
+.addClass(org.hibernate.auction.Bid.class)
+.setProperty("hibernate.dialect", "org.hibernate.dialect.MySQLInnoDBDialect")
+.setProperty("hibernate.connection.datasource", "java:comp/env/jdbc/test")
+.setProperty("hibernate.order_updates", "true");
+Chapter 3. Configuration
+32
+This is not the only way to pass configuration properties to Hibernate. Some alternative options
+include:
+1. Pass an instance of java.util.Properties to Configuration.setProperties().
+2. Place a file named hibernate.properties in a root directory of the classpath.
+3. Set System properties using java -Dproperty=value.
+4. Include <property> elements in hibernate.cfg.xml (this is discussed later).
+If you want to get started quicklyhibernate.properties is the easiest approach.
+The org.hibernate.cfg.Configuration is intended as a startup-time object that will be
+discarded once a SessionFactory is created.
+
+
+
+
+
+Specifies when Hibernate should release
+JDBC connections. By default, a JDBC
+connection is held until the session is
+explicitly closed or disconnected. For an
+application server JTA datasource, use
+after_statement to aggressively release
+connections after every JDBC call. For a
+non-JTA connection, it often makes sense to
+release the connection at the end of each
+transaction, by using after_transaction.
+auto will choose after_statement for the
+JTA and CMT transaction strategies and
+after_transaction for the JDBC transaction
+strategy.
+e.g. auto (default) | on
+
+
+
+
+
+

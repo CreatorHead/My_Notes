@@ -1,0 +1,60 @@
+select * from students_info
+where firstname like 'S%';
+
+
+Criteria criteria = session.createCriteria(StudentBean.class);
+			
+criteria.add( Restrictions.like("firstNM", "S%") );
+
+OR
+
+criteria.add( Restrictions.like("firstNM", "S%") );
+criteria.add( Restrictions.like("lastNM", "S", MatchMode.ANYWHERE) );
+criteria.setMaxResults(1);
+
+
+
+"list()"
+
+List<StudentBean> dataList = criteria.list();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			

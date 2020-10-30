@@ -1,0 +1,25 @@
+1. Begin the transaction 
+   [ session.beginTransaction() ]
+
+   org.hibernate.Transaction txn 
+	= session.beginTransaction();
+	
+2. Operate With DB
+   
+3. If No Error, then "commit" the transaction
+   [ Transaction.commit() ]
+
+4. If Error occurs, then "rollback" the 
+   transaction [ Transaction.rollback() ]
+
+
+
+<property name="connection.autocommit">
+	true
+</property>
+
+
+
+txn.commit()
+
+txn.rollback()
