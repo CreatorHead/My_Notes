@@ -1,0 +1,751 @@
+﻿Java DataBase Connectivity
+---------------------------
+
+Java DataBase Connnectivity is an API,  as the name 
+implies, IT HELPS TO ACHIEVE THE  CONNECTIVITY BETWEEN 
+Java Programs & Database
+Note: Servlets & JSPs are also java Programs
+If we have a Web application & if it has a DB, then 
+it needs to interact with DB to read/ modify the data 
+JDBC helps to do this & in the world of Java, JDBC  is
+the “one and only” API that helps to interact with 
+RDBMS (DB)  Application.
+Also JDBC  is “DB independent” i.e. Using JDBC we can 
+interact with any RDBMS Applications in the world.
+
+Necessary Steps to Work with JDBC
+1-	Loads the Driver
+2-	Get the DB Connection via Driver
+3-	Issue SQL Queries via Connection 
+4-	Process the results returned by SQL Queries
+5-	Close All JDBC Objects
+
+
+To Create a Database
+---------------------
+create database sdet_db;
+
+To list all the Databases in you MYSQL Server
+---------------------------------------------
+show databases;
+
+To use a database
+-----------------
+use sdet_db;
+
+To create a Table by name student_info
+--------------------------------------
+CREATE TABLE students_info (
+  regno int(10),
+  firstname varchar(50),
+  middlename varchar(50),
+  lastname varchar(50),
+  PRIMARY KEY (regno)
+);
+
+To Show Table Names
+-------------------
+show tables;
+
+To get all the data from the table
+----------------------------------
+SELECT * FROM students_info;
+
+To insert data into the tables
+-------------------------------
+INSERT INTO students_info  VALUES (1,'Aatish',' ','Azad');
+INSERT INTO students_info  VALUES (2,'Apoorva',' ','S');
+INSERT INTO students_info  VALUES (3,'Suyash',' ','Jain');
+INSERT INTO students_info  VALUES (4,'Gourav',' ','Debnath');
+INSERT INTO students_info  VALUES (5,'Kumari',' ','Shalini');
+
+
+Drivers
+--------
+Drivers are additional software components required by JDBC to interact with RDBMS applications. Drivers are provided by DB vendors 
+and they  are DB dependent, that means, using MYSQL driver we can only interact with MYSQL RDBMS application and using DB2 drivers we 
+can only interact with DB2 RDBMS application.
+
+
+JAR (Java Archive) File: 
+------------------------
+ > It’s a collection of “.class” files + others Necessary
+	Resources (Text File ,XML, Property  Files, Etc.)
+ > JAR File helps us to transfer the “Java Files/ .class 
+	filse/ Java Application” From one location to an
+	another location
+ > JAR File will have “.jar” file extension & Functionality
+	wise it’s similar to “ZIP” file
+
+Steps To make use of JAR File:
+------------------------------
+1-	Right Click on the Java Project, where we want to make
+	use of JAR File, select “Build Path” click on 
+	“Add External Archives…”
+2-	Select the “JAR File” & Click on “Open”
+3-	We see JAR File under “Referenced Libraries”
+
+Driver Class
+------------
+ > “Driver Class” is a Concrete Class, present in driver 
+	JAR file, is the one that 
+	implements the “java.sql.Driver” interface
+ > This interface is present in JDBC API & every JDBC
+	driver provider has to implement this Interface.
+ > “Driver” helps us to establish DB Connection, 
+	transfers the DB  query and results between Java 
+	program and RDBMS Application.
+
+Steps to Load the “Driver Class” into the Program
+-------------------------------------------------
+1.	By invoking “registerDriver()” method present in 
+	“java.sql.DriverManager” Class by passing an instance 
+	of “Driver Class” 
+	Syntax:
+		public void DriverManager
+			.registerDriver(java.sql.Driver driverRef)
+								throws SQLException
+ 
+
+Driver Types
+------------
+There are 4 types of Drivers
+1.	Type 1: JDBC-ODBC Bridge
+2.	Type 2: Native-API Driver
+3.	Type 3: Network-Protocol Driver
+4.	Type 4: Native-Protocol Driver
+
+
+Get the DB Connection via Driver
+--------------------------------
+String dbUrl = "jdbc:mysql://localhost:3306/sdet_db";
+con = DriverManager.getConnection(dbUrl, "root", "root");
+
+
+Get the Connection via Driver
+-----------------------------
+Syntax:
+ String dbUrl = "jdbc:mysql://localhost:3306/sdet_db"+
+					"?user=root&password=root";
+		con = DriverManager.getConnection(dbUrl);
+	or
+ String dbUrl = "jdbc:mysql://localhost:3306/sdet_db";
+		con = DriverManager
+			.getConnection(dbUrl,"root","root");
+//getConnection(String dbUrl, String user, String password);
+		
+We can make use of any version of “getConnection()” 
+	method to establish connection to RDBMS application
+
+
+	
+Static Query and Dynamic Query in JDBC
+--------------------------------------	
+Static SQL queries: Queries which doesn’t have condition 
+		Or 
+				Condition values are hard Coded.
+			
+Dynamic SQL queries: There must be a condition plus one 
+		or more condition will be evaluated at the runtime.  ( ? )
+
+		
+Static SQL Queries
+------------------
+SQL queries
+-	“Without conditions” OR
+-	“with Hard Coded condition values” are called as 
+	“Static SQL Queries”
+Example:
+1-	Select * from tablename;
+2-	Create database DB_NAME;
+3-	Select * from ABC where X = 1;
+4-	Insert into ABC values (1, ‘Aatish’);
+Note: ABC = Table Name
+
+Dynamic SQL Queries
+-------------------
+SQL Queries which
+-	Must have conditions & 
+-	One/More condition values get decided at runtime are 
+	known as “Dynamic SQL Queries”.
+Examples:
+1.	Select * from ABC where X = ? and Y = ?;
+2.	Select * from ABC where X = 1 and Y = ?;
+3.	Insert into ABC values (?,”Praveen’);
+Note:
+1.	ABC = Table Name
+2.	Dynamic SQL Query Must Contain One/More Question Marks.
+
+JDBC Statements
+----------------
+JDBC  Statements send SQL queries to RDBMS and retrieve the
+data from RDBMS application.
+There are  different typed of JDBC Statements 
+1.	java.sql.Statement
+2.	java.sql.PreparedStatement
+
+Once we create JDBC Statement Object (any of the above type) , then we MUST  invoke any one of he below method to issue SQL  queries to DB
+1.	Int executeUpdate() throws SQLExeception
+	This method is used to execute “Other than SELECT “ 
+	SQL queries.
+	This method return “Number of Rows Affected Count” in 
+	the form of Integer.
+
+2.	ResultSet executeQuery() throws SQLException
+	This method is used to execute “ONLY SELECT” SQL Queries
+	This method returns “DB Results” in the form of 
+	“ResultSet” Object
+
+
+Java.sql.Statement
+------------------
+> Its an interface & an Object of Statement is used to 
+	execute “Static SQL Queries”
+> Statement Object can be created by invoking 
+	“createStatement()” method on “Connection” Objects
+Syntax:
+-------
+Statement Connection.createStatement() throws SQLException
+Statement stmt  = con.createStatement();
+Where “con” is the Object reference of “java.sql.Connection” Object
+
+
+java.sql.PreparedStatement
+--------------------------
+ - It’s an interface  & an object of PreparedStatement is 
+	used to execute “Dynamic SQL Queries”
+ - PreparedStatement Object can be created by invoking 
+	“prepareStatement()” method on “Connection” Object.
+
+Syntax:
+-------
+PreparedStatement Connection.prepareStatement(String query)
+							throws SQLException
+Example:
+--------
+String query = “delete * from students_info where regno = ?”;
+PreparedStatement  pstmt = con.prepareStatement(query);
+
+Where “con” is the object reference of “java.sql.
+	Connection” Object
+	
+ - PreparedStatements MUST be used with query parameters (?)
+	& these query parameters need to be set using proper 
+	setXXX () method before executing the dynamic SQL query 
+Syntax:
+-------
+void setXXX(Position of ? as Int Value, Corresponding 
+	Runtime Value) throws SQLException 
+	where XXX = Java Data Type corresponding to DB 
+	Column Data Type.
+ - PreparedStatements are also Known as “precompiled 
+	Statements” & they helps us to achieve 
+	“high performance”
+
+	
+Processing the Results returned by SQL Queries:
+-----------------------------------------------
+Whenever we issue SQL Queries to RDBMS Application 
+via JDBC there are two kinds of results executed out 
+of RDBMS Application
+1.	No. of Rows  Affected Count
+2.	DB Results
+
+
+> JDBC returns
+	- No. of Rows Affected Count “ As a “integer Value”
+	- DB Results in the form of “ResultSet Object”
+	
+java.sql.ResultSet
+------------------
+	Its an interface & an Object of ResultSet is an 
+	“Object representation of DB Results” produced by 
+	Select SQL query.
+	ResultSet object is produced by invoking 
+	“executeQuery()” Method on any of the JDBC Statements
+	objects.
+	ResultSet consists of N number of Rows with each row 
+	containing N number of Column’s.
+	Number of rows and columns in ResultSet directly 
+	depends on “Where condition” & “column list” 
+	respectively in “Select Sql query”
+	ResultSet object may consist of “Zero/More” Or 
+	“Zero/One” rows
+	If resultSet consist of zero/more rows of data then 
+	we must use “while loop”
+	If ResultSet consist of zero/one row of data then we 
+	can use either “while loop” or “if block” (preferred)
+	Once the ResultSet is produced, data from ResultSet 
+	can be extracted as follow:
+	
+1.	Move to describe Row by calling necessary ResultSet 
+	methods:
+	For Ex: next(), first(),last(),etc
+	
+2.	Retrieve the desired column value using 
+	getxxx(<name of the Column in Sql Table>);
+	Where xxx = java Data type corresponding to DB Table 
+	column data type
+Note: getxxx() methods are the ONLY way to retrieve data 
+from ResultSet object. 
+
+
+
+
+Closing All the JDBC Objects
+-----------------------------
+
+Why we need to Close Necessary JDBC  Objects:
+	JDBC Objects such as 
+-	Connection
+-	JDBC Statements and 
+-	ResultSet
+Make use of memory
+	In case of Connection Object, further RDBMS Application 
+	resources are consumed 
+	Also memory consumed by ResultSet object is 
+	comparatively more compared to other JDBC objects
+	Hence forgetting to close any of JDBC objects “ will 
+	heavily impact the application performance” and 
+	“Garbage Collection” should not be relied upon
+	So it’s important to close any of the JDBC Object as 
+	soon as their job is done.
+	To close any of the JDBC Objects invoke “close()”
+	method
+
+Syntax:
+public void close() throws SQLException
+
+
+Summary:
+	While making use of JDBC we MUST follow 5  steps and 
+	out of 5, only once 
+-	We need to load the Driver (step 1)
+-	We have to get the DB Connection (Step 2)
+-	We have to Close JDBC Objects (Step 5)
+	But ,Step 3 and 4 (i.e. Issuing SQL QUERIES & 
+	processing Results) can happen “N” number of times 
+	depending on our use 
+	Step 1 to 4 will be in “try block” and step 5 will be 
+	in “finally block”.
+	Commonly used JDBC Objects are 
+1.	Java.sql.DriverManger
+2.	Java.sql.Connection
+3.	Java.sql.Statement
+4.	Java.sql.PreparedStatement
+5.	Java.sql.CallableStatement
+6.	Java.sql.ResultSet
+7.	Java.sql.SQLEcxeption
+	Out of these apart from DriverManager & SQLException 
+	rest of them are “Interfaces”. Where as DriverManager & 
+	SQLException are “Concrete Classes”
+	SQLException is a Concrete Class which extends 
+	“java.lang.Exception” & it’s a “Checked Exception”
+
+	
+	
+	
+	
+	
+	
+	
+	
+Servlets Introduction
+---------------------
+Web Browser:
+	It’s a “Stand Alone Application” which helps us to 
+	interact 
+	with web applications
+	Browser is the One & Only application which understands 
+	content/data present in HTML and display accordingly
+
+
+Web Resources:
+-------------
+	Resources present inside a web application are called 
+	as web resources
+	There are two types of web resources 
+I-	Static web Resources:
+-------------------------
+	- These resources “are present at web application” 
+	before 
+	making the request
+	- Content of these resources “does not change”.
+	- In other words, resources which generates 
+	response” is called as Static web Resources
+	Few Examples: 
+	-------------
+	1.	Any Songs Downloads
+	2.	Any Books (PDF, MS-WORD, etc.) Download
+	3.	Any Software Download
+	4.	Any Video/Movie files.
+
+II-	Dynamic  Web Resources:
+	- These resources “does not present at web 
+		application” before making the request & they get 
+		generated at the time of request.
+
+	- Content of these resources “May Change” for every 
+		request (Dynamic Response)
+	- In other words, resources which generates 
+	“dynamic response” is called as Dynamic Web Resources
+	- Few Examples:
+	1.	Any NetBanking Web Application Transaction 
+	Statement Download (PDF file)
+	2.	Any Post Paid Connection Statement Downloads 
+	(PDF file)
+	3.	Google Search Page (HTML Page)
+	4.	Gmail Inbox Page (HTML Page)
+	5.	Facebook Home Page (HTML Page)
+	6.	Gmail “Download All Attachments” (ZIP file)
+Note:
+-----
+Both Static & Dynamic Web Resources can be “HTML” or 
+“Non-HTML”  in nature.
+
+
+Setting Up Dynamic Web Project 
+------------------------------
+1. Change the perspective by clicking on "open perspective" on top
+	right corner to Java EE from Java.
+2. Click on File -> New -> Dynamic Web Project to Start building a 
+	Dynamic Web Project.
+3. Give the Project Name and Click on Next -> Next -> "Make Sure to 
+	Check on 'Generate web.xml deployment Descriptor' " and then click
+	on Finish.
+	
+Setting Up a Web Server (Tomcat)
+--------------------------------
+1. Extract the zip file.
+2. Keep the Tomcat Folder inside C Drive. (Note: You can keep the 
+	Tomcat folder anywhere inside the Hard disc.)
+3. Go to your Eclipse IDE. Click on Servers Tab -> Click On "No Servers 
+	are available. Click this link.." hyperlink to create a Server.
+4. Select Apache -> 'Your Tomcat Version' -> Click on 'Next' -> Browse 
+	Your Tomcat Folder and then Click 'OK'.
+5. Select Your Web Project to Add inside the Tomcat Server by Clicking
+	on 'Add' Button. 
+6. Click on Finish.
+
+Adding Dependencies(Jars) for Servlets and JSPs in Web Project
+--------------------------------------------------------
+1. Get the Jar file from Folder: Tomcat-> lib -> servlet-api.jar
+2. Copy and Paste the Jar File Inside Your Project: 
+	Location: MyWebProject -> WebContent -> WEB-INF -> lib
+
+	
+Java Resources : All the .java files are Present inside this Folder.
+WebContent: All the other than .java files are Present inside this
+			folder.
+			
+
+
+
+
+
+
+Web Application :
+-----------------
+	Web Application is an  application which is accessed over the 
+	network with the help of web browser
+	Web application is a collection of web resources
+	If a web application consists of “ONLY static resources then it is
+	called as “Static Web Application”
+	If a web application consists of “one/more dynamic resources” then 
+	it is called as “Dynamic Web Application”
+	Example: Gmail, Facebook, Twiter, Flipkart, etc.,
+	J2EE helps us to develop “Dynamic Web Applications”
+
+
+
+Web Server:
+------------
+	Like any other application (Adobe Reader, Media Player, etc.,) , 
+	Webserver is also an application which runs on Operating System
+	Webserver as the name implies “Serves requests to  a Web 
+	Applications”
+	In other words, it helps both web browser & web application to 
+	interact with each other 
+	Hence every web application (Static/Dynamic) is directly under the 
+	control of webserver
+	Few Examples: 
+1-	Apache Tomcat
+2-	Apache JBOSS
+3-	IBM WebSphere
+4-	Oracle WebLogic
+5-	Oracle GlassFish & many more…
+
+
+Different ways to interact with Web Applications
+------------------------------------------------
+1.	By Typing an URL in Browser
+2.	By Clicking on the Hyperlink
+3.	By Submitting the HTML Form
+
+
+
+WEB URL
+-------
+	Web URL, uniquely indentifies a particular web resource inside a 
+	web application
+	Hence every web resource (Static/Dynamic) must need to have its 
+	unique address in the form of “web URL".
+	
+Note: 
+In case of Static web Resources, URL Consists of Resource file Name
+
+We know that web application is a collection of web resources. 
+Web URL uniquely identify these web resources inside a web application.
+Structure of web url is :
+ protocol://domain:port/path?query-string#fragment_id
+
+Protocol:
+---------
+	When one application wants to communicate with other (or in case 
+	browser & server) , there needs to be a common language which both 
+	application understands & that language should have set of rules 
+	and instructions
+	This common language has set of rules known as “Protocol”.
+	Web Browser & Web Server application communicate using 
+	1.	Hyper Text Transfer Protocol (HTTP)
+	2.	Hyper Text Transfer Protocol Secure (HTTPS)
+	As the name implies most of the time HTTP  Response contain HTML
+	In Url it’s an optional information & default protocol is HTTP
+
+Domain:
+-------
+	IT uniquely identifies a computer in a network in which web 
+	application is present 
+	Domain consists of Computer Name / IP address of the computer in 
+	which web application is present 
+	In URL it is a Mandatory Information
+
+
+
+Port:
+	Port number in Web URL uniquely identifies web server application
+	Default port number for http IS 80 & https is 443
+	In URL this is an optional information
+	When it’s not used default port number is used depending on the 
+	protocol present in Web URL
+	In Tomcat Webserver, default port number for HTTP is changed from 
+	80 to 8080 and default port number for HTTPS is changed from 
+	443 to 8443
+
+Path:
+	We know that web application is a collection of web resources 
+	(Static / Dynamic) & also Web Server can consist of one/more 
+	applications
+	Path is the full path of the web resource at web application side
+	It consists of Web Application Name + (File Name in case of Static 
+	Resource OR configured URL in case of Dynamic Resource)
+	Web Application Name “ uniquely identifies One web Application 
+	inside webserver.
+	“File Name” uniquely identifies Static web resource inside that web
+	application
+	“Configured URL” uniquely identifies Dynamic web
+	In URL, it’s an optional Information.
+
+Query String:
+	Query String is a name & value string pair which passes information 
+	ONLY to Dynamic Resources such as Servlets & JSPs
+	In URL, It’s an optional information and if present it starts with 
+	question mark followed by one or more name-value pair which are 
+	separated by an ampersnd(&)
+Examples:
+www.google.com/search?q=Knight
+
+http://localhost:8080/studentsApp/currentDate?fname=xyz&lname=sfd
+
+servlet Code to get Query String Information:-
+
+String fnmVal = request.getParameter(“Fname”);
+String lnmVal = request.getParameter(“lname”);
+
+Where,
+Request = Object reference of HttpServletRequests
+
+
+Fragment ID
+	A fragment ID or Fragment Identifier, as the name implies, it refers
+	to a particular section within a web page
+	In URL, It’s an optional information & if present, it begins with a 
+	hash (#) character followed by an identifier.
+Example:
+https://en.wikipedia.org/wiki/Isaac_Newton#Works
+
+Key elements of HTTP Response are:
+----------------------------------
+1.	Status code
+2.	Content Type
+3.	Actual Content
+4.	Cookies (if any)
+
+Key elements of HTTP Requests are:
+----------------------------------
+1.	URL
+2.	Form Data (if any)
+3.	HTTP Method
+4.	Cookies (if any)
+
+Status Code:
+------------
+>	Status code represents the status of HTTP  Request For example,
+	Status Code:		
+	Description
+
+	200		Server successfully handled the request
+
+	404		Requested Resource (static/dynamic) is not found at server 
+			side
+
+	500	Server encountered an unexpected condition which prevented it 
+		from fulfilling the request.
+
+	Note: 
+	>	It’s a Mandatory information & it will be present in Header of 
+		HTTP Response
+	>	Generally Webserver provides “Status Code” info in Http 
+		Response
+
+Content Type OR Multipurpose Internet Mail Extensions (MIME) 
+------------------------------------------------------------
+>	Content Type OR Multipurpose Internet Mail Extensions (MIME) Type, 
+	tells the browser that what type of content it’s going to receive
+	so that it can prepare itself to handle the response data
+>	For example,
+	- Open an Adobe Reader to handle PDF content
+	- Open Media Player to handle media content etc.
+>	It’s a mandatory information & it will be present in Header of HTTP
+	Response
+>	The default content type is “text/html”
+>	Few Examples:
+	text/html
+	appplication/pdf
+	video/quicktime
+Many more…
+
+Actual Content:
+---------------
+> It’s a Mandatory information & it will be present in Body of HTTP 
+	Response
+> In case of static resource content of the resource becomes the 
+	“Actual Content”
+> In case of dynamic resource, content present in servlets/ JSP becomes
+	the “Actual Content”
+> In case of Error Scenarios webserver generates error information & 
+	it becomes the “Actual Content”.
+
+
+
+
+Request Components:
+-------------------
+Web Url
+-------
+> Web application is a “Collection of Web Resources” & every web 
+	resource (static/dynamic) should have its unique address in the 
+	form of web URL
+> Hence every request should consist of Web URL (Mandatory information) 
+	& it will be present in Header HTTP Request.
+	
+Form Data:
+----------
+> Data collected using HTML form is called as Form Data
+> i.e Whenever we make request by Submitting Form, Then ONLY HTTP 
+	Request will have Form Data
+> Hence in HTTP Request it’s an Optional Information
+> If Present, it may be present in either Header or Body of HTTP 
+	Request which depends on HTTP Method Present in the Request..
+
+
+HTTP Method
+-----------
+> It’s a mandatory information present in the header of the HTTP 
+	Request
+> HTTP Method is the first component in the HTTP Request header
+> HTTP 1.0 had 3 mehods & in HTTP 1.1, Five new Methods got introduced
+	so in total HTTP 1.1  has 8 different methods & every Http Request 
+	should consist of “ONE of the 8 HTTP Methods”
+(Present in HTTP 1.1)
+1.	HEAD
+2.	TRACE
+3.	PUT
+4.	DELETE
+5.	OPTIONS
+6.	GET
+7.	POST
+8.	CONNECT 
+Code Word: htpp dog c
+
+
+POST Method
+-----------
+> This method allows user to Post the data of unlimited size to the 
+	server using HTML FORM (i.e Form Data)
+> Post requests have a body
+> Hence data sent using the POST is present in the body of the HTTP 
+	Request.
+	
+GET Method
+----------
+> This method allows us to get the data from server
+> It’s a default method
+> Get requests “Using the GET  Method the form-data is present 
+	in the Header part of HTTP Request “in the form of Query String”
+	
+What determines whether Browser sends GET or POST requests:
+1.	Typing a URL in Browser makes request to contain GET method
+2.	Clicking on a Hyper link in Browser makes request to contain GET 
+	Method
+3.	Submitting the form with method= “get” form attribute in Browser
+	makes request to contain Get method.
+4.	Submitting the form with method = “post” form attribute in Browser 
+	makes request to contain “POST” method.
+5.	Submitting the form with “No method form attribute declaration
+	“ in Browser makes request to contain “GET” method.
+
+
+
+
+
+
+
+
+
+
+
+
+
+JSP
+
+1.	Get the Req & Generates Dynamic Response
+2.	Why JSP? 
+	It devides the presentation login and Bussiness logic.
+3.	Accessed the JSP using the File name.
+4.	Time taken for first request is more as compare to 
+	following request.
+Java Server Pages (JSP)
+	Its an API of J2EE which accepts the Reqquest &
+	generates “Dynammic Response”
+	With Respect to functionality, both Servlets & JSP’s 
+	are one & the same because JSP get “translated to a 
+	Servlet” at runtime
+	JSP Separates “Business Logic” from “Presentation 
+	Logic” however these two are tightly coupled in case 
+	of Servlets
+	With this separation different people can work on 
+	different tasks.
+	With this separation different people can work on 
+	different tasks
+1.	“Web Designer” can develop “presentation Logic”
+2.	“Web Developer” can develop “business Logic”
+
+
+
+
+
+
+
+
+
