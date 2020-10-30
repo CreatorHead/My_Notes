@@ -1,0 +1,12 @@
+Driving Direction
+	https://maps.googleapis.com/maps/api/directions/json?origin=15.2993265,74.12399599999999&destination=13.173706,77.8826809
+
+GeoCode Response
+	https://maps.googleapis.com/maps/api/geocode/json?address=goa
+
+Flickr Image Search Using Location
+	https://www.flickr.com/services/api/explore/flickr.photos.search
+
+facebook
+	"https://graph.facebook.com/v2.8/659042164188198/me?fields=first_name,last_name,tagged_places{place}&access_token=EAACEdEose0cBALP6XgKYbTbmzjqV9qcwr9SmHqF6tYe5sZBbR9DWsfqZBO8GJPHSP0eKJ5xYL87jDXttOBhL5XRt9gWZAoAIlu1ZAJZBu31CMFtLt2rVKGLJblW5TDMsScUzOOmwzZCfChytGdxKQtYbpAwOos7TX6m4ZAZA59ZAKESpQf30JcXAlx512oqpyivwZD&pretty=0&fields=sundargarh&limit=25&after=TmpJMU1ERXpOVEV3T1RFNU9UZAzNPakV6T1RneE1UZA3hPRFU2TXprME1EZAzVOalF3TmpRM09ETTIZD"
+   

@@ -1,0 +1,28 @@
+
+//Java 2 JSON
+Gson gson = new Gson();
+String json = gson.toJson(ref);
+System.out.println("JSON :- ");
+System.out.println(json);
+
+File f = new File("GoogleResponse.json");
+try(FileWrinter wr = new FileWriter(f)){
+	gson.toJson(ref,wr);
+}catch(Exception e){
+	e.printStackTrace();
+}
+System.out.println("Created the File...");
+
+
+//JSon 2 Java
+main(){
+	Gson gson = new Gson();
+	GeocodeResponse resp = null;
+	try(FileReader reader = FileReader("GoogleResponse.json")){
+		resp = gson.fromJson(reader, GeocodeResponse.class);
+	}catch(Exception e){
+		e.printStackTrace();
+	}
+
+	System.out.println(resp);
+}

@@ -1,0 +1,97 @@
+1. What is Web Service?
+ A. Web Services helps to communicate with multiple application to communicate with each other. 
+
+2. How does a web service work?
+ A. A web service is used to communicate among various applications by using open standards such as 
+	HTML, XML,JSON, WSDL, and SOAP.
+
+
+3. What are the advantages of web services?
+ A. It independent of any specific programming language, helps web application to interact 
+	each other applications (Mobile Apps / Desktop Applications /Web Applications)
+
+
+
+4. What are the different types of web services?
+ A. There are two types of web services:
+    SOAP
+    RESTful
+
+
+
+5. What are the main features of web services?
+ 
+6. What is SOAP?
+ A. SOAP stands for Simple Object Access Protocol. It is a XML-based protocol for accessing web services.
+
+7. What are the advantages of SOAP web services?
+ A. 
+    WS Security
+    Language Independent
+    Platform Independent
+
+
+
+
+8. What are the disadvantages of SOAP web services?
+ A. 
+    Slow
+    WSDL Dependent
+
+
+
+9. What is WSDL?
+ A. WSDL stands for Web Services Description Language. It is a xml document containing information about web services
+	 such as method name, method parameter etc.
+
+
+
+
+
+
+10. What is RESTful web services?
+ A. REST stands for REpresentational State Transfer. It is a architectural style. It is not a protocol like SOAP.
+
+
+
+
+
+
+
+
+11. What are the advantages of RESTful web services?
+ A. 
+    Fast
+    Language Independent
+    Platform Independent
+    Can use SOAP.
+    Allows different data format.
+
+
+
+
+
+
+12. What tools are used to test web services?
+ A. SoapUI tool for testing SOAP and RESTful web services
+    Poster/Requester for firefox browser
+    Postman extension for Chrome
+
+
+
+
+    
+
+
+13. What is Interoperability in Web services?
+
+ A. Web services facilitate various applications to communicate with each other and share data and services among 
+	themselves. Other applications can also use the web services. For example, a VB or .NET application can 
+	communicate with a Java web services and vice versa. Web services are used to make the application platform
+	 and technology independent.
+
+
+
+
+
+
