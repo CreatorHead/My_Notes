@@ -1,0 +1,7 @@
+Prerequisite for Selenium
+-------------------------
+* Basics of Programming
+* Basics of Java
+* Basics of Eclipse
+* Smart Brain
+
