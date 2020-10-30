@@ -1,0 +1,34 @@
+1- Go to current folder:
+ cmd: git init	//initialize the folder as git repository
+
+ cmd: git add	//add the file in the staging environment
+
+ cmd: git status	//to see status of the file
+
+ cmd: git add .		//to staging environment
+
+ cmd: git commit -m	'your msg'	// whatever will be on the staging environment
+					   will be logged as a record in the commint
+					   log. (-m for message)
+ 
+ Note: The difference between staging and comminting is like 
+	   Saving a file and printing a file (When you print
+	   it becomes more permanent)
+	   
+ cmd: git log	// to see the logs
+
+ cmd: git checkout fileName		//revert the file changes
+
+ cmd: git checkout . 	//revert all files changes
+
+ cmd: git reset HEAD fileName 	//remove a file from staging 
+								environment.
+
+ cmd: git rm -f FileName 	// Delete the file and move every thing
+							   in staging (it's quicker) 
+							   
+ cmd: git add --all 	//do the staging and all handle all the
+						  all the file manipulation automatically
+
+ cmd: git diff // it will show you the changes that are made in the files.
+ 	  git diff --staged //show the file which are staged

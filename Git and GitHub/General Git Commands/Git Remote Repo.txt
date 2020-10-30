@@ -1,0 +1,3 @@
+cmd: git remote add origin <remote-url> //to connect with the remote repo
+cmd: git push -u origin master //take all the local repo to the remote repo, :origin 
+									is the remote(like master) and master is the local

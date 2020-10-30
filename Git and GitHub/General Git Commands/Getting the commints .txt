@@ -1,0 +1,25 @@
+Getting the Commints 
+
+ cmd: git commit -m	'your msg'
+
+ cmd: git log //to get the commmits logs entry
+
+ cmd: git checkout hash // to pull the commint from log to 
+						working environment
+
+ cmd: git branch //to see the branches in the git
+
+ cmd: git chekout master //to go back to master branch
+
+ cmd: git branch <branch-name> hash //to create a new branch 
+ 									  with a specific commin
+
+ cmd: git merge <branch-name> // it will merge the given branch
+								with the current branch
+ cmd: git checkout -b <branch-name> //to create a new branch and switch
+ 									 to it immediately
+
+ cmd: git branch -m app01 app1 //to rename a branch
+ 
+ cmd: git branch -D <branch-name> // to delete the branch 
+ 

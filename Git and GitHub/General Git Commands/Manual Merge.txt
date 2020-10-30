@@ -1,0 +1,5 @@
+When merging will not happen wiht blob file.
+
+cmd: git checkout --theirs -- <path>
+cmd: git add <file-name>
+cmd: git commit -m 'msg'

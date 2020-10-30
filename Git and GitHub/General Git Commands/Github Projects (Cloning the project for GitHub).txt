@@ -1,0 +1,20 @@
+ cmd: git clone <project-url> //to clone the project locally
+								(on a computer)
+								it will download only the 
+								master branch
+								
+ cmd: git branch -a //to see the remote branches
+
+ cmd: git checkout -b <local-branch> <remote-branch> //to pull out a specific branch				
+
+ #Step for pulling all the branches from gitHub:
+ * Make a local folder
+ * Go to the local folder
+ * cmd: git clone --mirror <project-url> .git //copy the .git folder 
+ * git config --bool core.bare false //swithching from bare repos to regular
+ * git reset --hard //grab everything inside the folder and create all the branches
+ 
+ cmd: git clone -b <branch-name> <url> //to clone a specific branch
+ 
+ cmd: rm -dfr .git //it will delete the folder and not ask you for permission
+ 				   //simple remove command in Linux

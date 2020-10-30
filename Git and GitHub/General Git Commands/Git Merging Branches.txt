@@ -1,0 +1,4 @@
+# Make sure that both of the branches are clean.(No pending changes, untracked files, 
+or a modified file which need to be stagged )
+
+cmd: git merge <branch-name> //it will merge the current branch with the 								given branch name.
