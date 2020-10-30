@@ -1,0 +1,24 @@
+
+Day: 1
+	a. Introduction
+	b. Story of a Man and a Fish
+	c. The fact about the current situation (No competetion, it's about domination)
+
+Day 2:
+	a. Algorithm
+	e. odd loop
+	h. Sorting Array using Arrays.sort()
+	j. Giving Them tricky problems on Java.
+		1. On Static Block
+		2. Pre-increment/decrement and  post increment/decrement
+		3. Integer (Immutability)
+		4. Static Methods
+		5. Arithmetic Operation (1/0.0 and 0.0/0.0 ==> Infinity , NaN)
+	
+Day 3: 
+	a. breaking a loop using labled statement
+	b. Where we can make use of break?
+	c. Generating random numbers Using Math.random() and
+		then formatting the output
+	d. Showing the Java SE Class implementation on eclipse IDE
+	e. What do you mean by Method Hiding.

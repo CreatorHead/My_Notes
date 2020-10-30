@@ -1,0 +1,5 @@
+Format of a Recursive Function
+------------------------------
+> A Recursive function performs a task in part by calling itself to perform the subtasks. At some point, the function encounters a subtask that it can perform without calling itself. This case where the function does not recur , is called the BASE CASE and the function which calls itself to perform a subtask, is referred to as the recursive case.
+ 
+For Example: 

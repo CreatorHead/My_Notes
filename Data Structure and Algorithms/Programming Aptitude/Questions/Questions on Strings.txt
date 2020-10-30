@@ -1,0 +1,27 @@
+1. Write a program to Implement toUpper()? 
+
+2. Write a program to Implement toLower()?
+
+3. Write a program to reverse the case of a character in a String?
+
+4. Write a program in Java to reverse any String without using StringBuffer?
+
+5. How to Print duplicate characters from String?
+
+6. How to check if two Strings are anagrams of each other?
+
+6. How to count number of vowels and consonants in a String?
+
+7. How to replace each given character to other e.g. blank with %20?
+
+8. How to check if String is Palindrome?
+
+9. How to sort String on their length in Java?
+
+10. Write a program to find longest palindrome in a string?
+
+11. Write a java program to count the number of occurrences of each character in a string?
+
+12. Write a java program to remove all white spaces from a string?
+
+13. Write a java program to reverse a given string with preserving the position of spaces?

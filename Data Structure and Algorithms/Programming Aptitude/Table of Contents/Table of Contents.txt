@@ -1,0 +1,121 @@
+1. Introduction
+	a. Ideas to codes
+	b. Algorithm
+	c. Some java New Features (try with resources, long with underscore)
+	d. Story of a man and a fish
+	e. Types of Problems : simple and complex 
+
+2. branching and looping:
+	a. operators ( ||, &&, !)
+	b. combination of conditional operators
+	c. do while loop
+	d. odd loop
+	e. breaking a loop using labled statement
+	f. showing the iteration of nested loops
+	g. break;
+	h. continue;
+	i. Generation random numbers Using Math.random() and
+		then formatting the output
+	j. sorting them using Array.sort()
+	k. showing the Java SE Class implementation on eclipse IDE
+	l. giving them a simple overloading problem
+
+3. The Arrays Class
+	a. Arrays.toString()
+	b. Arrays.sort()
+	c. Arrays.parallelSort()
+	d. Arrays.binarySearch()
+	e. Removing duplicates using Set and iterator.
+	f. How many classes in JDK 1.8 	
+			    4240 in java 8
+			    4024 in java 7
+			    3793 in java 6
+			    3279 in java 5.0
+			    2723 in java 1.4.2*
+			    1840 in java 1.3.1*
+				Javadocs prior to 5.0 are now offline.
+	g. showing "How to download the java documentation" and then how to use it.
+	h. Write a singleton class?
+	i. What is method(String ... values)
+	j. give them a tricky question on narrowing and widening
+	k. Write a program to reverse a number using numeric operations.(HomeWork)
+	l. String[] temp = set.toArray(new String[set.size());
+
+4. Data Structures of Java
+	a. Collections methods:
+		1. sort()
+		2. binarySearch()
+		3. addAll()
+
+	b.	1. sort using TreeSet
+		2. Remove Duplicate using HashSet
+		
+5. File Handling 
+	a. File Reading
+	b. File Writing
+	c. File Class (Why to use the File Class)
+	d. Exercise: 
+		1. Create a file with data like ("123/Aatish/23")
+		2. Read the file in java
+		3. Split the lines using String.spilt("delimiter")
+			<!--4. Create an Object of Person Class.
+			5. Add it to ArrayList
+			6. Print the values-->
+
+6. Collection methods
+	a. How they work
+	b. When to override hashcode() and equals()
+	c. When to implement comparable interface
+	d. When to implement comparator interface
+	e. Exercise on comparator and comparable by 
+		making a custom class and sorting it using arraylist
+	f. Exercise on hashcode() and equals() by adding custom objects using hashcode.
+
+7. Numbers
+	a. Reverse the given no
+	b. If a number is prime
+	c. sum of 10 prime nubmer
+	d. ASCII value of a corresponding character
+	e. decimal number to binary format
+	f. fibonacci series 
+	g. Number is Armstrong numbers
+
+8. Arrays [integers]
+	a. swap
+	b. bubble sort
+	c. How to find duplicate number on Integer array in Java?
+	d. Find the missing number in integer array of 1 to 10?
+	e. How to find largest and smallest number in unsorted array?
+	d. How to find all pairs on integer array whose sum is equal to given number?
+
+9. Strings 
+	a. How to Print duplicate characters from String?
+	b. How to check if two Strings are anagrams of each other?
+	c. How to reverse String?
+	d. How to check if a String contains only digits?
+	e. How to check if String is Palindrome?
+	f. How to sort String on their length in Java?
+	g. How To Reverse Each Word Of A String In Java?
+	h. How to Sort a String based on characters?
+
+10. Sorting
+	a. Bubble Sort
+	b. Insertion Sort
+	c. Merge Sort
+	d. Quick Sort
+
+11. Searching 
+	a. Unordered LinearSearch
+	b. Sorted Linear Search
+	c. Binary Search
+
+12. Data Structures
+	a. ArrayList Implementation
+	b. LinkedList Implementation
+	c. Queue and Stack
+
+13. Patterns
+	a. Pyramid
+	b. Half Right Pyramid
+	c. Half Left Pyramid
+	d. Rhombus

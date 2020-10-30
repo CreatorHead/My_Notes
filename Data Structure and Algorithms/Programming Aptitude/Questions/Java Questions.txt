@@ -1,0 +1,122 @@
+
+1. What will happen if you put return statement or System.exit () 
+	on try or catch block? Will finally block execute?
+
+2. What do the expression 1.0 / 0.0 will return? will
+	 it throw Exception? any compile time error?
+
+3. What will happen if we put a key object in a HashMap which is already there?
+
+4. Short hand if else.
+
+5.	public class A{
+	 public static void show(){
+	 
+	        System.out.println("Static method called");
+	 }
+	 
+	 public static void main(String[] args)  {
+	 
+	        A obj=null;
+	        obj.show();
+	 
+	    }
+	 
+	}
+
+6. public class Test {
+		static int a = 1111;
+		static
+		{
+			a = a-- - --a;
+		}
+
+		{
+			a = a++ + ++a;
+		}
+		public static void main(String[] args) {
+				System.out.println(a);
+		}
+	}
+
+7. class A
+	{
+	    void method(int i)
+	    {
+	        //method(int)
+	    }
+	}
+ 
+	class B extends A
+	{
+	    @Override
+	    void method(Integer i)
+	    {
+	        //method(Integer)
+	    }
+	}
+
+8. public class A{
+
+  
+ 		public static void main(String[] args)  {
+ 
+   			Integer i1 = 128;
+ 
+   			Integer i2 = 128;
+ 
+     		System.out.println(i1 == i2);
+ 
+   			Integer i3 = 127;
+   			Integer i4 = 127;
+ 
+     		System.out.println(i3 == i4);
+ 
+   	 }
+ 
+	}
+
+9. class A
+	{
+    
+		public static void main(String [] args)
+		{
+ 
+  			Integer i = new Integer(null);
+  			String s = new String(null);
+ 
+ 	}
+
+10. public static void main(String [] args)
+	{
+ 
+  		System.out.println(null);
+
+ 	}
+ 
+
+ 11. Immutable class:
+
+    Make class final so that it should not be inherited.
+    All the variables should be private so should not be accessible outside of class. 
+    Make all variables final so that value can not be changed.
+    A constructor to assign values to variables in class.
+    Do not add any setter methods.
+
+12.  public class Testing {
+   	 		public static void main(String[] args)
+     	{
+         // the line below this gives an output
+         // \u000d System.out.println("comment executed");
+    	}
+	 }
+
+     The reason for this is that the Java compiler parses the unicode character \u000d as a new line and gets transformed 	into:
+		public class Testing {
+	   		 public static void main(String[] args)
+	    	 {
+	       	 // the line below this gives an output
+	       	 // \u000d
+	      	  System.out.println("comment executed");
+	   		 }
+		}

@@ -1,0 +1,8 @@
+Doubly Linked List
+==================
+
+* The advantage of doubly linked list (also called two-way linked list) is that given node in a list, we can navigate in both directions.
+
+* The disadvantages of doubly linked lists are:
+	a. Each node requires an extra pointer, requiring more space.
+	b. The insertion or deletion of a node takes a bit longer.

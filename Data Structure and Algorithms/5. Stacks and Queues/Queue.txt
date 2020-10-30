@@ -1,0 +1,36 @@
+Queue
+=====
+* A queue is a data structure used for storing data
+ (similar to LinkedLists and Stacks).
+* A queue is an ordered list in which insertion 
+	are done at one end and deletions are done at
+	other end(front).
+* The first element to be inserted is the first one 
+	to be deleted . Hence, it is called First in 
+	First Out(FIFO) or Last in Last Out(LILO) list.
+* When an element is inserted in a queue, the 
+	concept is called EnQueue, and When an element
+	is removed from the queue,the concept is called 
+	as DeQueue.
+* DeQueueing an empty queue is called underflow and 
+	EnQueuing an element in a full queue is called
+	overflow.
+	
+	
+
+Operations on Queue
+===================
+* enQueue(int data): Inserts an element at the end 
+	of the queue.
+* deQueue(): Removes and returns the elements at 
+	the front of the queue.
+
+
+
+
+Applications
+============
+* Operating System Schedule jobs (with equal priority)
+	in the order of arrival.
+* Waiting time of customers at call center.
+* Asynchronous Data transfer

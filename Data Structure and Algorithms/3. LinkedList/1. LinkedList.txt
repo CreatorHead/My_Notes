@@ -1,0 +1,22 @@
+1. Linkedlist is a data structure used for storing
+	collection of data. Linked list has the 
+	following properties.
+	a. elements are connected by pointers/addresses
+	b. Last element point to null
+	c. Can grow or shrink in size during execution.
+	d. It does not waste memory space (but takes 
+	extra memory for pointers) 
+
+2. Advantages of LinkedList
+	a. They can be expanded in constant time.
+	b. With LinkedList we can start for just 
+	one element allocated and add on new elements 
+	easily wihtout the need to do any copying and 
+	reallocating.
+	
+3. Disadvantages of LinkedList
+	a. The main disadvantage of LinkedList is 
+		access time to individual elements. 
+	b. LinkedList wastes memory in terms 
+		of extra reference points.
+

@@ -1,0 +1,8 @@
+Merge Sort
+	> Merge sort is fast and stable
+
+	> Merge sort requires additional space proportional
+		to the size of the input array
+
+	> Merge sort is relatively simple to code 
+		and offers performance slightly below of quicksort.

@@ -1,0 +1,44 @@
+Stack
+=====
+* A Stack is a simple data structure for storing 
+	(similar to LinkedList).
+
+* A stack is an ordered list in which insertion and
+	deletion are done at one end, called as top.
+	The last element inserted is the first one to
+	be deleted. 
+
+* Hence, it is called Last in First out (LIFO)
+	or First in Last Out(FILO) list.
+
+* When an element is inserted in a stack,
+	the concept is called as push, and when 
+	an element is
+	removed from the stack, the concept is called as pop.
+
+* Trying to pop out an empty stack is called
+	Underflow and trying to push an element in
+	a full stack is called as Overflow. Generally,
+	we treat then as exceptions.
+
+	
+	
+Main Stack Operations
+======================
+* push(int data): Inserts data onto stack
+* pop(): Removes and returns the last inserted
+	element from the stack.
+* peek(): It will return the top element of the
+	stack without popping
+* isEmpty(): Indicates wheter any elements are 
+	stored in stack or not.
+* isFull(): Indicates whether the stack is full. 
+	returns true if the stack is full.
+
+
+Applicatoin of Stacks
+=====================
+* Balancing of symbols
+* Implementing function calls(including recursion)
+* Undo sequence in a text-editor
+* Matching the Tags in HTML and XML

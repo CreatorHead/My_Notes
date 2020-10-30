@@ -1,0 +1,5 @@
+Why Recursion
+-------------
+> Recursive code is generally shorter and easier to write than iterative code. 
+
+> Recursion is most useful for tasks that can be defined in terms of similar subtasks. For example, sort, search, and traversal problems often have simple recursive solutions. 

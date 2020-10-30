@@ -1,0 +1,14 @@
+Arrays
+		swap
+		bubble sort
+	 Write program to sort an integer array without using API methods?
+
+	 How to find duplicate number on Integer array in Java?
+
+	 Find the missing number in integer array of 1 to 10?
+
+	 How to find largest and smallest number in unsorted array?
+
+	 How to find all pairs on integer array whose sum is equal to given number?
+
+	 Remove duplicate from a given arrays

@@ -1,0 +1,17 @@
+Recursion
+---------
+ A recursive approach mirrors the problem that we are trying to solve. 
+
+ A recursive approach makes it simpler to solve a problem, which may not have the most obvious answers.
+
+ But, recursion adds overhead for each recursive call (needs space on the stack frame) 
+
+ Recursion
+ ---------
+• Terminates when a base case is reached.
+
+• Each recursive call requires extra space on the stack frame (memory).
+
+• If we have a infinite recursion, the program may run out of memory and gives back stack overflow.
+
+• Solutions to some problem are easier to formulate recursively.

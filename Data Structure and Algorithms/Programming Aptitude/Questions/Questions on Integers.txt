@@ -1,0 +1,219 @@
+Numbers
+	1. Write a program in Java to check if a number is even or odd in Java?
+
+		Program Check even or odd without using modulus and division operators?
+
+		Bitwise Operators :
+		===================
+	    Bit wise operators will work on bits at a time.
+	    AND: 1 & 1=1
+	    OR : 0 | 1= 1 , 1 | 0=1 , 1| 1= 1
+	    XOR: 0 ^ 1= 1 , 1^ 0=1
+	    NOT: !0=1
+
+		public class EvenorOdd {
+	 
+					public static void main(String []args )    {
+	 
+			    	int number;
+	    			Scanner in= new Scanner(System.in);
+	 
+			    	System.out.println("Enter a number to check even or odd");
+	    			number=in.nextInt();
+	 
+				    if((number & 1)==0){
+	        		System.out.println(+number+" is Even number");
+	    			}else{
+	        		System.out.println(+number+" is Odd Number");
+	    		}
+	 
+			}
+		}	 
+
+	2. Write a program to reverse the given no using Numeric Operation?
+	A: 
+        public class NumberReverse {
+     
+        public int reverseNumber(int number){
+             
+            int reverse = 0;
+            while(number != 0){
+                reverse = (reverse*10)+(number%10);
+                number = number/10;
+            }
+            return reverse;
+        }
+         
+        public static void main(String a[]){
+            NumberReverse nr = new NumberReverse();
+            System.out.println("Result: "+nr.reverseNumber(17868));
+        }
+    } 
+
+	3. Write a program to check if a number is prime?
+	 public class PrimeNumberExample {
+       public static boolean isPrime(int number){
+            for(int i=2; i<number; i++){
+               if(number%i == 0){
+                   return false; //number is divisible so its not prime
+               }
+            }
+            return true;
+        }
+   	 }
+
+
+		 Write a program to add the sum of 10 prime nubmer? 
+
+
+	4: Write a program to swipe two numbers without using the third operation?
+    A:  
+        int a = 10;
+        int b = 20;
+
+        System.out.println("value of a and b before swapping, a: " + a +" b: " + b);
+
+        //swapping value of two numbers without using temp variable
+        a = a+ b; //now a is 30 and b is 20
+        b = a -b; //now a is 30 but b is 10 (original value of a)
+        a = a -b; //now a is 20 and b is 10, numbers are swapped
+
+        System.out.println("value of a and b after swapping, a: " + a +" b: " + b);
+
+	5. Write Java program to check if a number is palindrome in Java?
+
+	6. How to find if a number is power of 2 in Java?
+		A.  STEP 1. Check if a number is perfectly divisible by 2 by doing (number % 2). If the number is 
+              		perfectly divisible by 2 then remainder is 0.
+
+			STEP 2. If the number is NOT perfectly divisible by 2 then remainder is not 0 and return from here 
+	               as number is not power of 2. 
+	               
+	            If the number is perfectly divisible by 2 then remainder is 0 and check whether the 
+	            remaining number (number / 2) is perfectly divisible by 2.
+
+			STEP 3. Repeat the steps until the number is 1.
+
+			
+
+			public static boolean isPowerOfTwo(int num) {
+				if(num % 2 == 0){
+					while(num != 1){
+						if(num % 2 == 0){
+							num = num/2;
+						}else{
+							return false;
+						}
+					}
+				}else{
+					return false;
+				}
+				return true;
+			}
+
+			Approach 2
+			===========
+			In this approach, We will use Bit manipulation.
+
+			Number which are power of 2 like 4, 8, 16, 32 etc has only one bit set in there binary representation.
+
+			and number which are one less like 3, 7, 15, 31 etc has all the bits set in there binary representation apart from bit set in 4, 8, 16, 32.
+
+    	    1 0 0 0 0   (16) n
+		&   0 1 1 1 1   (15) n-1
+---------------------------------------
+      		0 0 0 0 0
+
+	So if we do Bitwise AND of (number) & (number -1) and if the result is 0 than the number is power of 2 else not.
+
+
+	7. Write Java program to check if a number is Armstrong number or not?
+	A: public static boolean isArmstronNumber(int num){
+			int originalNum = num;
+			int result = 0;
+			int remainder = 0;
+			while(num != 0){
+				remainder = num % 10;
+				result = result + remainder*remainder*remainder;
+				num = num/10;
+			}
+			if(result == originalNum){
+				return true;
+			}
+			return false;
+	   }
+
+	8. Write a program to display ASCII value of a corresponding character?
+
+	9. Write a program to convert decimal number to binary format?
+	A: public static String decimalToBinary(int num){
+		String result = "";
+		while(num != 0){
+			result = (num%2)+result;
+			num = num/2;
+			}
+		
+		return result;
+		}
+
+	10. Write a program to print fibonacci series 
+	A: public static int[] printFibonacci(int size){
+			int[] nums = new int[size];
+			nums[0]=0;
+			nums[1]=1;
+			int first = nums[0];
+			int second = nums[1];
+			int result = 0;
+			for(int i=2;i<size;i++){
+				result = first + second;
+				nums[i] = result;
+				first = second;
+				second = result;
+			}
+			return nums;
+	  }
+
+	11. Write a Java program to print Fibonacci series upto 100?
+
+	12. Write a program to mimic Integer.parseInt() ?
+	A: public static int parseInt(String num){
+		char[] nums = num.toCharArray();
+		int number = 0;
+		int place = 1;
+		for(int i=num.length()-1;i>=0;i--){
+			number = number+ place * ((int)nums[i] - 48);
+			place = place * 10;
+		}
+		return number;
+	  }
+
+	14. Write a Java program to calculate factorial of an integer number ?
+	A: public static void fact(int num){
+		int result = 1;
+		for(int i=1;i<=num;i++){
+			result = result * i;
+		}
+		System.out.println(result);
+	}
+
+	15. Write a Program to find a powerOf a number with given power?
+	A: public static int powOf(int num, int power){
+		int result = 1;
+		for(int i=0;i<power;i++){
+			result = result * num;
+		}
+		return result;
+	  }
+
+	16. To find the pairs of Number of a sum in an given array
+	
+	public static void findPairsOfSum(int arr[],int num){
+
+		for(int i=0;i<arr.length;i++){
+			for(int j=i+1;j<arr.length;j++){
+				if((arr[i]+arr[j]==num)){
+					System.out.println("The pairs are "+arr[i]+ " and "+arr[j]+" for "+num);
+				}
+			}
+		}
+	}

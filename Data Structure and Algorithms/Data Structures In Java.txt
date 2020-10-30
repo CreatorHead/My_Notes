@@ -1,0 +1,26 @@
+Q:Q:What makes two objects equal?
+A:
+ Reference Equality
+	>	Two references, one object on the heap
+		Two references that refer to the same object on the heap are equal.
+		If you call hashCode() method on both references, 
+		you'll get the same result. If you don't override the hashCode() method, 
+		the default behaviour will be invoked (means each objects will have a unique number). 
+	> 	Most version of java assign a hashcode bases on the object's 
+		memory address on the heap, so no two objects will have the same hashCode.
+	>	If you want to know if two references 
+		are really reffering to the same object, use the == operator,
+		which compares the bits in the variables
+
+ Object Equality
+	> 	Two refereces, two objects on the heap, 	but the objects are considered
+		meanigfully equivalent.
+	>	To do this You must override the 
+		hashCode() and equals() methods inherited form class Object.
+
+
+Q:How a HashSet checks for duplicates: hashCode() and equals() ?
+A: When a object will be put into a HashSet, it uses the object's hashcode value to determine where to
+	put the object in the Set. But it also compares the object's hashcode to the hashcode of all the
+	other objects in the HashSet, and if there is no matching hashcode, the hashset assume that this
+	new object is not a duplicate. 

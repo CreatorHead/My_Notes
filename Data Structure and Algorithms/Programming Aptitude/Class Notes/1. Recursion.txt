@@ -1,0 +1,17 @@
+Introduction to Recursion
+--------------------------
+
+• Any Function which calls itself is called recursion. 
+
+• A recursive method solves a problem by calling a copy of itself to work on a smaller problem. This is called the recursion step.
+
+• The recursion step can result in many more such recursive calls. It is important to ensure that the recursion terminates.
+
+
+
+
+
+
+• Each time the function calls itself with a slightly simple version of the original problem.
+
+• The sequence of smaller problems must eventually converge on the BASE CASE.

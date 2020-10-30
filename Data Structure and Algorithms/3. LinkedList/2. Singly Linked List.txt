@@ -1,0 +1,17 @@
+Single Linked List
+==================
+
+1. Generaly "linked list" means a singly linked list.
+
+2. This list consists of a number of nodes in which 
+	each node has a next pointer to the following
+	element.
+
+3. The link of the last node in the list is NULL, 
+	which indicates end of the list.
+
+4. Basic Operations on a List:
+	a. Traversing the list
+	b. Inserting an item in the list
+	c. Deleting an item from the list
+
