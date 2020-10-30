@@ -1,0 +1,44 @@
+1. What is Hibernate?
+2. Advantages of Hibernate?
+3. Difference between JDBC and Hibernate?
+4. Why we use hibernate.cfg.xml file?
+5. What is the meaning of ORM?
+6. How many ways are there to Map a Class to a Table?
+7. How to configure Hibernate?
+8. Why we use Configuration Class in Hibernate?
+9. What is the use of configure() in Hibernate?
+10. configure() method by defult search for which file?
+11. What are the methods use for Delete, Create and Read Data from the Table?
+12. How many overloaded configure() methods are present and explain
+    each of them?
+13. What is SessionFactory in Hibernate?
+14. What is the work of SessionFactory?
+15. What is Session?
+16. Why we use Session?
+17. How to get an Object of Session?
+18. What is the use of openSession() method?
+19. How to close a session object?
+20. What is a Transaction?
+21. What is the use of fulsh() method?
+22. How to Interact with multiple databases in Hibernate?
+23. What is Annotations?
+24. Explain @Entity, @Table, @Id, @Column ?
+25. What is the use of @GeneratedValue?
+26. Explain Persistence Context Life cycle in Hibernate?
+27. What are the Lifecycle pahases of a Java Bean in Hibernate?
+28. When the Entity will be in the Transient State?
+29. What is the use of contains() method in Hiberanate?
+30. What is HQL?
+31. Benifits of HQL?
+32. What is the use of createQuery() in hibernate?
+34. Use of list()?
+35. Use of getResultList()?
+36. Use of executeUpdate()?
+37. What is the User of @Transient?
+38. What is the use of @Temporal?
+39. What is Level 2 Chaching?
+40. What is the use of @ElementCollection?
+41. What is the user of @CollectionTable?
+42. Why Hibernate need chaching?
+43. Types of chaching in Hibernate?
+44. What is the use of @JoinColumn?

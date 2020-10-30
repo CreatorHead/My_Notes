@@ -1,0 +1,37 @@
+1. How to create JDBC Connection?
+
+2. What is Statement & ResultSet in JDBC?
+
+3. How to execute and read select queries using JDBC?
+
+4. How to update a record in the database using JDBC?
+
+5. How to execute any type of query in JDBC?
+
+6. What are the types of JDBC Statements available?
+
+7. Write an example code for JDBC prepared statement.
+
+
+
+
+
+8. How to get primary key value (auto-generated keys) from inserted queries using 		JDBC? 
+	
+9. Write a simple program for CallableStatement statement to execute stored procedure. 
+
+10. How to get column properties from ResultSet using ResultSetMetaData?
+ 
+11. Write an example for batch update using Statement?
+
+12. Write an example for batch update using PreparedStatement? 
+	
+13. What are the types of ResultSets in JDBC?
+
+14. Write an example for scrollable result set with read only mode.
+	
+15. How to insert an image into database table? or Write an example for inserting BLOB into table?
+
+16. How to read an image from database table? or Write an example for reading BLOB from table?
+
+17. What is DatabaseMetaData? Write an example code?

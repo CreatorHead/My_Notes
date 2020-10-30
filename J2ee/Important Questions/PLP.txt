@@ -1,0 +1,145 @@
+1. What is the diff between Iterator and  Listerator?
+2. When we use forEach and when to use iterator?
+3. When does ConcurrentModificationException Occur?
+4. Concurrent collections?
+5. What is IllegalMonitorStateException ?
+6. How to make a class immutable and Pallindrome program... please also review these two?
+7. 4 pillars of java.Explain one with example
+8. What is difference between interface and abstract class( where can we use them like application)
+9. What is servlet?
+10. One program to find even numbers from given array?
+11. Oops concepts
+12. Overriding and overloading
+13. Base class in Java
+14.Can we overload main method and what happens if so 
+15. About jvm
+16. Collection concept
+17. Palindrome program
+18. To make a thread which is recommended implement runnable or extend thread class and why ?
+19. When do we go for abstract class and when we go for interface?
+20. Prime number program?
+21. Differences between final finally and finalize 
+22. Why we go for Abstraction 
+23. Need for interface over abstract class
+24. SQL questions based on joins
+25. What is spring. Why we need it
+26. Why dependency injection is important in springs?
+27. Difference between hashset,treeset and arraylist,linked list
+28. Syntax of main method like wat is (String[ ] args) means.
+29. Can interface will extend an interface?
+30. Explain any 3 annotations of spring.
+31. Examples of hibernate.
+32. Can Abstract method be static
+33. Diff b/w Treeset and hashmap
+34. Constructor
+35. File handling
+36. Program to  take a gunzip file and extract it and put in a particular location.... etc
+37. Method overloading and overriding differences
+38. Inheritance types, encapsulation..
+39. Differences b/w Post method and get method in servlets
+40. Jsp tags such as scriptlet and taglib tag
+41. Difference b/w map,set and list
+42. Difference b/w hashmap and hashset
+43. Structure of spring MVC
+44. Only explain about project
+45. Case study of your project and 
+46. Junit has done or not
+47. Which viewResolver u used?
+48. Tell me case study about your project
+49. What is @Entity?
+50. Wht r the implementation u have done in pjct....hw u implemented thm
+51. Explain ur whole pjct
+52. Which collection you  used in your project
+53. Difference between list and map
+54. About springRest 
+55. Springboot
+56. What is JPA and how it works?
+57. Case study of project,spring mvc structure,how u store data using collection in project,difference between comparable and comparator
+58. Which jdbc type you have used... benefits of that type
+59. Difference between servlet and httpservlet
+60. Difference between hashtable and hashmap?
+61. Difference between Statment and prepare Statment?
+62. Explain servlet life cycle and difference between servlet and http servlet...only two he asked
+63. How hashmap works
+64. Difference b/w get and post ?
+65 They  asked qns on core java J2ee spring and hibernate
+66. Difference between spring and spring boot?
+67. Architecture of spring boot?
+68. What is the use of @Response Body
+69. Where we are using jdbc?
+70. What annotations we use for emf and em
+71. Difference b/w all the jdbc drivers?
+72. What is difference b/w get and post method?
+73. Which view revolver you are using,How it works?
+74. Use of @Controller nd @RestController
+75. What are the implementation you have done in project? 
+76. Functional interface 
+78. What is entity manager
+79. Difference between hashmap and hashtable
+80.Default capacity of arraylist
+81. Case study of your project?
+82. What you have done in your project.
+83. do you have implemented junit in your project?
+84. Difference between Arraylist and Map?
+85. About the project and it's test case
+86. What you did in module 3 and module
+87. How you make the ID as unique
+88. For me what u implemented in project about servlet
+89. Post and get method difference
+90. Servlet life cycle phases and about session
+91. What r entity classes present in ur project??
+92. @Transactional
+93. @RestController
+94. Difference between stream api and lambda expression
+95. Difference between hashtable and hashmap
+96. Why hashtable performance is slow
+97. Why we use springRest
+98. What is concurrent hashmap
+99. Project name and regarding collections
+100. About project,like explanation and in hibernate what is ORM and why we use that??
+101. Have u given module 3 and module 4 
+102. What collection u used
+103. How can u store the employes in unique.
+104. What entites u used in your project
+105. What are you using in front end.... angular using or not?
+106. Who is provider orm tool
+107. Diff btwn hashmap and hashtable
+108. What is restfull controller and why we use it 
+109. Why we use @response body
+110. Explain about spring mvc architecture 
+111. What is springrest
+112. Spring mvc architecture
+113. ABout layered architecture and explain the flow
+114. @Controller annotation
+115. Types  of jdbc drivers
+116. Why we use type 4 jdbc driver
+117. Explain abt project 4)why we use @Requestmapping annotations
+118. What is web.xml
+119. @Request mapping
+120 .@Request Param
+121. Spring MVC
+122. explain about statement and prepared statement
+123. View resolver,which view resolver u used in your project
+124. Differeance bw https and https servlet
+125. 6 checked and 6 unchecked example,diff bw checked and unchecked exception,
+126. Different types of drives,Advantages of all these drives
+127. Difference between jpa with hibernate and jdbc
+128. Implementation of project:-
+
+which module you have used to implement your project.
+explain one functionality of your project 
+function of hashmap
+Did u implement junit
+Case study
+implementation
+Have u implemented in spring boot in ur project
+project name and which part you implement in your project
+
+129. Spring MVC Architecture
+130. Difference Between Model And View 
+131. Difference Between Spring MVC And Spring Boot
+132. Diff bw arraylist n vector 
+133. Diff hashmap n hashtable
+134. JPA lifecycle
+135. Diff between spring rest &spring boot
+136. Diff between comparable and comparator .

@@ -1,0 +1,103 @@
+
+
+
+1. What is JDBC?
+
+java database connectivity 
+It provides classes and interfaces to connect or communicate Java application with database. 
+JDBC API is a Java API that can access any kind of data stored in a Relational Database.
+ It enables Java programs to execute SQL statements.
+
+
+2. How many types of Drivers are there in JDBC?
+
+There are 4 types of JDBC drivers:
+JDBC-ODBC bridge driver.
+Native-API driver (partially java driver)
+Network Protocol driver (fully java driver)
+Native  Protocol driver
+
+
+3. How many steps are there in JDBC?
+5steps
+load the driver
+make a connection to the database
+execute the querry
+process the resultant data
+close all the connection
+
+4. Which type of Driver are used now a days?
+
+4th-NATIVE PROTOCOL DRIVER
+
+5. What is a Driver in JDBC?
+
+6. Advantages and Disadvantages of Type 4 Driver?
+
+
+Disadvantages : a) Requires database-specific coding to be done in the middle tier.
+ 4) Type 4 - the Native-Protocol Driver : The JDBC type 4 driver, also known as the native-protocol driver is a database driver 
+implementation that converts JDBC calls directly into the vendor-specific database protocol.
+
+7. What is the package representaion of JDBC?
+
+8. What is java.sql.Driver?
+9. How to Load a Driver?
+10. How to get the dbUrl in JDBC?
+11. What is the feature of JDBC v4?
+12. What is the Structure of DBUrl?
+
+ <protocol>:<sub-protocol>:<subname>
+
+13. Why we use getConnection() method?
+
+14. How to get a database connection in JDBC?
+15. How many overloaded versions of getConnection() method     is present in JDBC?
+
+3 overloaded versions of getConnection() method..
+getConnection()
+
+16. What is a property file?
+17. Why we ues java.util.Properties Class?
+18. What is the method to load the properties in Properties Class?
+19. How to get a property from properties object?
+20. Why we use java.sql.Connection?
+21. What the use of java.sql.Connection?
+22. Types of SQL queries in JDBC?
+23. Types of Statements in JDBC?
+3types
+statement
+prepared statement
+callable statement
+
+24. Types of Sql queries on the basis of sql resutls in JDBC?
+25. When to use java.sql.Statement?
+26. When to use java.sql.PreparedStatement?
+27. How to get an object of type java.sql.Statement?
+28. Why we use createStatement() method?
+29. What is the return type of createStatement()?
+30. When to go for executeQuery() and executeUpdate() ?
+31. How to get an object of type java.sql.PreparedStatement?
+32. Why we use prepareStatement() method?
+33. What is the return type of prepareStatement()?
+34. What is a stored procedure?
+35. When to for a CallableStatement in JDBC?
+36. What is a CallableStatemet in JDBC?
+37. Why we use prepareCall() method?
+40. What is the use of execute()?
+41. How execute() method works in JDBC()?
+42. What is the return type of execute()?
+43. What is the use of getResultSet() and getUpdateCount() methods?
+44. What is the use next() method in ResultSet Object?
+45. Why we use setXXX() method in PreparedStatement and CallableStatement?
+46. Why we use getXXX() method in ResultSet object?
+47. Why we need to close the JDBC object?
+46. What are the most costly resouces in JDBC?
+47. What is the use of close() method?
+48. Why we need to write the closing step in the finally block?
+49. What is Batch Processsing or Batch Execution in JDBC?
+50. Why we use addBatch() method?
+51. What is the use of executeBatch() method?
+52. How to achive Transaction in JDBC?
+53. What is the use of autoCommit() method in JDBC?
+54. What is the use of commint() method in JDBC?

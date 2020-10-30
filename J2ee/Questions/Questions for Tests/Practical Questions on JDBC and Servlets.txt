@@ -1,0 +1,12 @@
+1. Write One servlet to create a cookie with 
+	key as "name" and value as "your_name" 
+	and One more servlet to Read that cookie from
+	the request and print it on the Server's Console
+	and browser  (with web.xml included)
+
+2. Design a Data Access Object Pattern for students 
+	app and implement login() and updatePassword() 
+	and You must use a DTO for transfering the data 
+	between different layers.
+
+3. Design a Factory Design Pattern for studentApp.

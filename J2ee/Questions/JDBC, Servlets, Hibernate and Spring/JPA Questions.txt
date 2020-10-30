@@ -1,0 +1,15 @@
+1. What is ORM and Why We need ORM?
+2. Explain Persistence Life Cycle?
+3. What is the Use of persist(), remove(), find() and getReference() methods?
+4. What is the difference between Eager Loading and Lazy Loading?
+5. What is JPQL and Why we use JPQL?
+6. Explain OneToOne, OneToMany and ManyToMnay Associations?
+7. Why we need JPA?
+8. What is EntityManagerFactory and what is the method to create EMF?
+9. What is EntityManager and how to create EntityManager?
+10. Diffrence between EntityManagerFactory and EntityManger?
+11. How to begin a transaction in JPA? Write the methods?
+12. How to commit a transaction in JPA? Explain with codes?
+13. What is the use of @Id?
+14. Why we use @GeneratedValue
+15. Type of GenerationType in JPA with Explanation? (AUTO, IDENTITY, SEQUENCE, TABLE)

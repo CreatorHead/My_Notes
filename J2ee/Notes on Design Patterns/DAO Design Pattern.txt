@@ -1,0 +1,17 @@
+DAO Design Pattern
+-------------------
+> The purpose of DAO’s is to help us to interact with database.
+
+> This design pattern defines data access methods in an Interface & corresponding implementation logic will be present in a “Concrete Class” which impemets this interface.
+
+> Therefore we can hava “N” number of implementation class to align with different type of data access mechanism we want to use.
+
+> For example, 
+-	One implementation class uses JDBC
+-	Other one uses Hibernet
+-	One more uses Spring-JDBC, etc..
+
+> The DAO interface exposes only the relevant data access methods to the other programs by hiding implemetaion detalis.
+
+> With DAO design pattern it is quite easy to swap from one implementation to another with minimal impact on application because the interface exposes by the DAO to other programs does not change when the underlying data handling logic changes.
+

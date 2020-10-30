@@ -1,0 +1,22 @@
+1. What is the benefits of using Spring Framework?
+2. What is Dependency Injection (DI)?
+3. Explain tight coupling and loose coupling?
+4. What are the benifits of Dependency Injection?
+5. Expalin Wiring in Spring?
+6. What is the use of ApplicationContext?
+7. What is the use of ClassPathXmlApplicationContext and 
+	AnnotationConfigApplicationContext?
+8. Explain Bean Lifecycle in Spring Framework?
+9. What is the use of DisposableBean interface?
+10. Type of Spring Container?
+11. Difference between BeanFactory and ApplicationContext?
+12. Type of wiring in Spring Framework?
+13. What is Autowiring in Spring?
+14. What is component scanning?
+15. What is the use of @Component, @ComponentScacn, @Autowired, @request, @service?
+16. What is the use of getBean()?
+17. How to Mix Spring Bean Configurations?
+18. What is the use of @Import and @ImportResources?
+19. Types of Spring Configurations?
+20. What is the default scope of Bean?
+21. Different types of Scope in a Spring Container?

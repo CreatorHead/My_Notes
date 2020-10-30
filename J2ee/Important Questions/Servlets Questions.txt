@@ -1,0 +1,96 @@
+
+1. What is a computer?
+2. Type of Application in a Computer?
+3. Types of Architecture in a Web Application?
+4. What is a 3-tier Architecute?
+5. What is a 2-tier Architecture or client-server Arch?
+6. What is a Server?
+7. What is a Web Server?
+8. What is an Applicatoin Server?
+9. What is a Web Application?
+10. Types of Web Applications?
+11. What is a Web Resource?
+12. Types of Web Resources in a Web Application?
+13. What is a Static Web Resource?
+14. What is a Dynamic Web Resource?
+15. What is a Servlet?
+16. What is a WAR file?
+17. What is Build and Deployment?
+18. How to Deploy a WAR file in a Tomcat Sever?
+19. How to Create a Dynamic Web Project in Eclipse?
+20. How to Make a WAR file using Eclipse?
+21. What is Structure of Http Request and Http Response?
+22. What are the major components of Http Req & Http Resp?
+22. How many Http methods are there in HTTP v1.1?
+23. What is the difference between GET & POST?
+24. Which Http Method is not supported in Servlet?
+25. What is status code?
+26. Give some examples of Status Codes?
+27. What do you mean by Content Type or MIME Type?
+28. MIME type stands for?
+29. What is a Servlet Container?
+30. What are the advantages of a Servlet Container?
+31. How to Start a Tomcat Server Manually?
+32. How to Integrate Tomcat Server with Eclipse?
+33. Why we use Web Browser?
+34. What is Web Path?
+35. Why we use J2EE or Java EE?
+36. What is a Web URL?
+37. What are the Components of the Web URL?
+38. What do you mean by Protocol?
+39. What is a Domain Name?
+40. What is a Port Number?
+41. What is the default port number for HTTP,HTTPS,FTP,SMTP
+    POP3?
+42. What is a Query String?
+43. Why we use Query String?
+44. What is a Fragment ID?
+45. What is the Structure of Req and Resp?
+46. What are the major componets of Request?
+47. How many http methods are present in HTTP v1.1?
+48. What is the differece between POST and GET method?
+49. How many ways are there to access a web application?
+50. Explain how a servlet container works?
+51. Examples of Important methods in request object?
+52. Important methods present in HttpResponse object?
+53. What is Deployment Descripter?
+54. Different ways to configure an URL?
+55. Types of Url matching in web.xml?
+56. What is the use of Generic Servlet?
+57. What is the difference between HttpServlet and GenericServlet?
+58. Why HttpServlet is an abstract class?
+59. Explain Servlet Lifecycle?
+60. How many instances are created for a servlet?
+61. Is a servlet multi threaded?
+62. A servlet is multi-threaded or signle-threaded?
+63. How to make a servlet sigle-threaded?
+64. Difference between servletContext and servletConfig?
+65. How do you get the ServletContext Object?
+66. How do you get the ServletConfig Object?
+67. What is the use of sendRedirect() method?
+68. What is the use of RequestDispatcher?
+69. What is forward and include?
+70. How to get the RequestDispatcher Object?
+71. Difference between Redirect and forward?
+72. What is a Cookie?
+73. Types of Cookie?
+74. What type of constructor is present in Cookie Object?
+75. How to add a cookie in the Response?
+76. How to get Cookies from the Request?
+77. How to make a cookie persistence?
+78. What is the use of getName() and getValue() ?
+79. What is the use of setMaxAge()?
+80. Why we use Attributes in Java EE?
+81. Types of Attributes?
+82. How to set an Attributes?
+83. Use of setAttribute(), getAttribute(), removeAttribute()?
+84. Explain the Scope,LifeSpan and Instantion of Attributes?
+85. How to delete a Cookie from a Browser?
+86. What is a Session?
+87. Why we need a Session?
+88. What is the disadvatage of Http?
+89. Difference between getSession() and getSession(false)?
+90. What is the use of setMaxInactiveInterrval(int timeInterval)?
+91. What is URL rewriting?
+92. How to get the Session ID from session Object?
+93. How to cofigure session timeout in web.xml(DD)?

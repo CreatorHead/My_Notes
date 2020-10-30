@@ -1,0 +1,48 @@
+MVC Design Pattern
+------------------
+ > This design pattern divides entire request & 
+ response flow into three components & 
+ it defines the interactions between them
+	1.	Model
+	2.	View+
+	3.	Controller
+
+1.	Model: (Data Model):-
+	It’s the core part of the application &
+	consists of application business logic 
+	In J2EE  application “plain Java Classes” 
+	are used as models
+
+2.	View:- 
+	The view captures the data from 
+	the user & also displays the data to the user
+	It does not worry about what that 
+	data means, or where to store that data etc.
+	In j2ee applications “HTML/ JSP’s” 
+	are used as Views.
+
+3.	Controller:-
+	Controller controls both model &
+	views. In other words it controls 
+	the entire request and response flow.
+	It takes the request from View, 
+	calls the Model to get some data and passes 
+	the data to the vies for displaying to user
+
+> MVC Design Pattern Advantages:-
+	MVC Design pattern helps us in achieving
+-	Readability
+-	Maintainability
+-	Flexibility
+-	Reusability 
+-	Scalability
+	Of the Web Application
+
+	Hence MVC Design pattern is most widely used 
+	Design Pattern to develop Web Applications
+	For Example, Struts & Spring Frameworks 
+	internally uses MVC  Design Pattern
+
+
+
+

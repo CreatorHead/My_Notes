@@ -1,0 +1,12 @@
+Factory Design Pattern:
+-----------------------
+> Other programs need not to own the responsibility of creating Class Y or Class Z object using new operator instead they get instance of either Class Y or Class Z through the Factory Class.
+
+	1.	As the name implies, Factory Class produces the Objects
+
+	2.	Factory class is a Concrete Class with constructor as private
+
+	3.	getInstance() method should be public static retrun type is of type IterfaceX
+
+	4.	It may or may not take input arguments. It depends on the design.
+
