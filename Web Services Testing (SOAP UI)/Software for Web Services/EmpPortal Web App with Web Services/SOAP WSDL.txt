@@ -1,0 +1,4 @@
+
+WSDK URL
+--------
+http://localhost:8888/EmpPortal?wsdl

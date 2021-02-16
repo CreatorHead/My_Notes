@@ -1,0 +1,163 @@
+Web Services RESTful
+--------------------
+
+WADL
+----
+http://localhost:8080/EmpPortal/rest/application.wadl
+
+
+1 Login to the Application and Getting the response in XML Format
+ [POST] http://localhost:8080/EmpPortal/rest/services/login/xml
+	Form Param
+	----------
+		empID=?
+		password=?
+		
+		
+2 Login to the Application and Getting the response in JSON Format
+  [POST] http://localhost:8080/EmpPortal/rest/services/login/json
+	Form Param
+	----------
+		empID=?
+		password=?
+		
+3 Login to the Application by Submitting JSON Data and getting Response in JSON Format
+  [POST] http://localhost:8080/EmpPortal/rest/services/login/asJson
+  
+  JSON Data for Request
+  ---------------------
+  {
+	"empID":"?",
+	"password":"?"
+  }
+
+
+4 Login to the Application by Submitting XML Data and getting Response in XML Format
+  [POST] http://localhost:8080/EmpPortal/rest/services/login/asXml
+  MIME Type: application/xml
+  XML Data for Request
+  ---------------------
+  <emp>
+	<empID>?</empID>
+	<password>?</password>
+  </emp>
+
+5 Create Profile by submitting form parameter
+  [POST] http://localhost:8080/EmpPortal/rest/services/createProfile
+	Form Param
+	----------
+		empID=?
+		firstname=?
+		lastname=?
+		email=?
+		password=?
+		salary=?
+		
+6 Create Profile by Submitting JSON Data
+  [POST] http://localhost:8080/EmpPortal/rest/services/createProfile/json
+  JSON Format
+  -----------
+  {
+    "empId": "?",
+    "firstName": "?",
+    "lastName": "?",
+    "email": "?",
+    "password": "?",
+    "address": "?",
+    "salary": ?
+  }
+  
+7 Create Profile by Submitting XML Data
+  [POST] http://localhost:8080/EmpPortal/rest/services/createProfile/xml
+  XML Format
+  -----------
+  <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+  <employee>
+	<empId>?</empId>
+	<firstName>?</firstName>
+	<lastName>?</lastName>
+	<email>?</email>
+	<password>?</password>
+	<address>?</address>
+	<salary>?</salary>
+  </employee>
+
+8 Deleting a profile by providing empID and Password as FormParam
+  [DELETE] http://localhost:8080/EmpPortal/rest/services/deleteProfile
+  Form Param
+	----------
+		empID=?
+		password=?
+
+9 Deleting a profile by providing empID and Password as XML 
+  [DELETE] http://localhost:8080/EmpPortal/rest/services/deleteProfile/xml
+  XML Format
+  ----------
+  <emp>
+	<empID>?</empID>
+	<password>?</password>
+  </emp>
+ 
+10 Deleting a profile by providing empID and Password as JSON 
+   [DELETE] http://localhost:8080/EmpPortal/rest/services/deleteProfile/json
+   JSON Format
+   -----------
+   {
+	 "empID":"?",
+	 "password":"?"
+   }
+
+
+11 Getting Employee by Passing the empID using Query String and Getting Response in JSON
+   [GET] http://localhost:8080/EmpPortal/rest/services/getEmpByID/json?empID=x
+   
+12 Getting Employee by Passing the empID using Query String and Getting Response in XML
+   [GET] http://localhost:8080/EmpPortal/rest/services/getEmpByID/xml?empID=x
+
+13 Getting Employee by Passing the empID using Query String and Getting Response in Plain Text
+   [GET] http://localhost:8080/EmpPortal/rest/services/getEmpByID/string?empID=x
+
+14 Getting Employee by Passing the empID using Matrix Param and Getting Response in JSON
+   [GET] http://localhost:8080/EmpPortal/rest/services/getEmpByID/matrix;empID=x
+
+15 Get All the Employees by pagination providing pageNo and pageSize as QueryParam and Getting Response in JSON
+   [GET] http://localhost:8080/EmpPortal/rest/services/getAllEmployee/json?pageNo=x&pageSize=x
+
+16 Get All the Employees by pagination providing pageNo and pageSize as MatrixParam and Getting Response in JSON
+   [GET] http://localhost:8080/EmpPortal/rest/services/getAllEmployee/matrix/json;pageNo=x;pageSize=x
+
+17 Get All the Employees by pagination providing pageNo and pageSize as QueryParam and Getting Response in XML
+   [GET] http://localhost:8080/EmpPortal/rest/services/getAllEmployee/xml?pageNo=x&pageSize=x
+
+18 Updates a Employee Detail by Submiting Employee Data in JSON Format
+   [PUT] http://localhost:8080/EmpPortal/rest/services/updateEmployee/json
+   JSON Format
+  -----------
+  {
+    "empId": "?",
+    "firstName": "?",
+    "lastName": "?",
+    "email": "?",
+    "password": "?",
+    "address": "?",
+    "salary": ?
+  }
+
+19 Updates a Employee Detail by Submitting Employee Data in XML Format
+   [PUT] http://localhost:8080/EmpPortal/rest/services/updateEmployee/xml
+   XML Format
+  -----------
+  <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+  <employee>
+	<empId>?</empId>
+	<firstName>?</firstName>
+	<lastName>?</lastName>
+	<email>?</email>
+	<password>?</password>
+	<address>?</address>
+	<salary>?</salary>
+  </employee>
+
+
+
+   

@@ -1,0 +1,6 @@
+declare namespace soapenv='http://schemas.xmlsoap.org/soap/envelope/';
+declare namespace tem='http://tempuri.org/';
+if( //tem:intA = '10' ) then 'Response 2'
+
+else
+ 'Response 3'

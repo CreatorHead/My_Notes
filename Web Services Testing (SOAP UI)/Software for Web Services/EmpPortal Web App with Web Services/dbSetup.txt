@@ -1,0 +1,21 @@
+CREATE DATABASE emp_db;
+USE emp_db;
+CREATE TABLE emp_info (
+	emp_id int,
+	firstname varchar(50),
+	lastname varchar(50),
+	email varchar(50),
+	salary double,
+	password varchar(50),
+	address varchar(50),
+	primary key(emp_id)
+	);
+
+INSERT INTO `emp_info` (`emp_id`,`firstname`,`lastname`,`email`,`salary`,`password`,`address`) VALUES (1,'Aatish','Azad','aatish@gmail.com',2000,'root','Jupiter');
+INSERT INTO `emp_info` (`emp_id`,`firstname`,`lastname`,`email`,`salary`,`password`,`address`) VALUES (2,'Blake','Ryder','blake@gmail.com',3000,'root','Jupiter');
+INSERT INTO `emp_info` (`emp_id`,`firstname`,`lastname`,`email`,`salary`,`password`,`address`) VALUES (3,'Katty','Hermen','katty@gmail.com',34000,'root','Jupiter');
+INSERT INTO `emp_info` (`emp_id`,`firstname`,`lastname`,`email`,`salary`,`password`,`address`) VALUES (4,'Deepak','HR','deepak@gmail.com',2000,'root','earth');
+INSERT INTO `emp_info` (`emp_id`,`firstname`,`lastname`,`email`,`salary`,`password`,`address`) VALUES (5,'Pratibha','MN','pratibha@gmail.com',6000,'root','earth');
+INSERT INTO `emp_info` (`emp_id`,`firstname`,`lastname`,`email`,`salary`,`password`,`address`) VALUES (7,'Bruno','Mars','bruno@gmail.com',33000,'root','Jupiter');
+INSERT INTO `emp_info` (`emp_id`,`firstname`,`lastname`,`email`,`salary`,`password`,`address`) VALUES (8,'JyotiPrakash','Mohanty','jyoti@gmail.com',7000,'root',NULL);
+INSERT INTO `emp_info` (`emp_id`,`firstname`,`lastname`,`email`,`salary`,`password`,`address`) VALUES (9,'Deepa','S','deepa@gmail.com',63000,'root','Pluto');
